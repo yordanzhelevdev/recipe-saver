@@ -1,0 +1,16 @@
+.recipeContainer {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 10px auto;
+  border: 1px solid black; }
+  .recipeContainer .recipeBody {
+    width: 200px;
+    height: 200px;
+    margin: 10px; }
+  .recipeContainer .recipeFooter {
+    margin: 10px;
+    max-width: 200px; }
+    .recipeContainer .recipeFooter p {
+      color: #222;
+      font-weight: bold; }
