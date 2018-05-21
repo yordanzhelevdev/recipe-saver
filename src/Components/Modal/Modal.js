@@ -19,12 +19,16 @@ class Modal extends React.Component{
 	}
 
 	render() {
+		const modal = this.state.isOpen ? 
+					(<div className='modal' >
+						<h1>{this.state.isOpen ? 'Opened' : 'Closed'}</h1>
+					</div>)
+					:
+					'';
 		return(
 			<div>
 				<button onClick={this.toggle}>Recipe</button>
-				<div className="modal">
-					<h1>{this.state.isOpen ? 'Opened' : 'Closed'}</h1>
-				</div>
+				{modal}
 			</div>
 		)
 	}
