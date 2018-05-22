@@ -21,7 +21,15 @@ class Modal extends React.Component{
 	render() {
 		const modal = this.state.isOpen ? 
 					(<div className='modal' >
-						<h1>{this.state.isOpen ? 'Opened' : 'Closed'}</h1>
+						<input type="file" />
+						<label>Recipe Name</label>
+						<input type="text" />
+						<label>Cook Time</label>
+						<input type="text" />
+						<label>Ingredients</label>
+						<textarea placeholder="Put each ingredient on its own line"></textarea>
+						<label>Directions</label>
+						<textarea placeholder="Put each step on its own line"></textarea>
 					</div>)
 					:
 					'';
