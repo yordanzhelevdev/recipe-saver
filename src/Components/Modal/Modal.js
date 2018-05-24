@@ -1,12 +1,13 @@
 import React from 'react';
 import './style.css';
+import ImageUploader from '../ImageUploader/ImageUploader';
 
 
 class Modal extends React.Component{
 	constructor(props){
 		super(props);
 		this.state = {
-			isOpen: false
+			isOpen: true
 		};
 		this.toggle = this.toggle.bind(this);
 	}
@@ -21,7 +22,7 @@ class Modal extends React.Component{
 	render() {
 		const modal = this.state.isOpen ? 
 					(<div className='modal' >
-						<input type="file" />
+						<ImageUploader />
 						<label>Recipe Name</label>
 						<input type="text" />
 						<label>Cook Time</label>
