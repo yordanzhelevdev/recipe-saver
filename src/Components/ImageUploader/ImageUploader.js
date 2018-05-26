@@ -1,8 +1,6 @@
 import React from 'react';
 import './style.css';
 
-
-
 class ImageUploader extends React.Component {
 	constructor(props){
 		super(props);
@@ -20,7 +18,7 @@ class ImageUploader extends React.Component {
 		const reader = new FileReader();
 
 		 reader.addEventListener('load', () => {
-		 		imageContainer.style.background = `url(${reader.result})`;
+		 		imageContainer.style.backgroundImage = `url(${reader.result})`;
 		 		imageContainer.style.backgroundSize = 'cover';
 		 		imageContainer.style.backgroundRepeat = 'no-repeat';
 		 		label.style.display = 'none';
@@ -34,9 +32,12 @@ class ImageUploader extends React.Component {
 
 	render() {
 		return (
-			<div className="imageContainer">
-				<label htmlFor="imageUpload" className="fas fa-upload"></label>
-				<input id="imageUpload" type="file" onChange={this.onPhotoUpload} />
+			<div>
+				<span>Recipe Photo</span>
+				<div className="imageContainer">
+					<label htmlFor="imageUpload" className="fas fa-upload"></label>
+					<input id="imageUpload" type="file" onChange={this.onPhotoUpload} />
+				</div>
 			</div>
 		)
 	}

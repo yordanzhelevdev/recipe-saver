@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import ImageUploader from '../ImageUploader/ImageUploader';
-
+import RecipeInputs from '../RecipeInputs/RecipeInputs';
 
 class Modal extends React.Component{
 	constructor(props){
@@ -21,17 +21,11 @@ class Modal extends React.Component{
 
 	render() {
 		const modal = this.state.isOpen ? 
-					(<div className='modal' >
-						<ImageUploader />
-						<label>Recipe Name</label>
-						<input type="text" />
-						<label>Cook Time</label>
-						<input type="text" />
-						<label>Ingredients</label>
-						<textarea placeholder="Put each ingredient on its own line"></textarea>
-						<label>Directions</label>
-						<textarea placeholder="Put each step on its own line"></textarea>
-					</div>)
+					(
+						<div className='modal' >
+							<RecipeInputs />
+					</div>
+					)
 					:
 					'';
 		return(
