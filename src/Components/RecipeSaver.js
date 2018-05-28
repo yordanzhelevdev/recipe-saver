@@ -8,6 +8,11 @@ class RecipeSaver extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			recipeName: '',
+			cookTime:'',
+			ingredients:'',
+			directions:'',
+			dishImg:'',
 			recipes: [
 				{	
 					recipeName: 'Ham And Cheese Breakfast Pockets',
@@ -44,15 +49,22 @@ class RecipeSaver extends React.Component {
 					directions: ['Frist Direction', 'Second Direction', 'Third Direction'],
 					dishImg: 'https://loremflickr.com/320/240?random=5'
 				},
-
 			]
 		}
+		this.onChange = this.onChange.bind(this);
+	}
+
+	onChange(field, value) {
+		this.setState({
+			[field]: value
+		});
+		console.log(this.state[field])
 	}
 
 	render() {
 		return (
 			<div>
-				<Modal />
+				<Modal onChange={this.onChange} />
 				<RecipesRender recipes={this.state.recipes} />
 			</div>
 			)

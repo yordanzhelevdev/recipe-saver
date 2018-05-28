@@ -36,7 +36,7 @@ class ImageUploader extends React.Component {
 				<span>Recipe Photo</span>
 				<div className="imageContainer">
 					<label htmlFor="imageUpload" className="fas fa-upload"></label>
-					<input id="imageUpload" type="file" onChange={this.onPhotoUpload} />
+					<input id="imageUpload" type="file" accept="image/*" onChange={this.onPhotoUpload} />
 				</div>
 			</div>
 		)

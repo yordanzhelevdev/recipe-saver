@@ -16,3 +16,24 @@
 
 .opened {
   display: block; }
+
+.inputsContainer {
+  display: flex;
+  justify-content: space-around; }
+  .inputsContainer .recipeInputs {
+    display: flex;
+    flex-direction: column; }
+    .inputsContainer .recipeInputs input[type="text"], .inputsContainer .recipeInputs input[type="time"] {
+      width: 250px;
+      height: 35px;
+      font-size: 25px; }
+    .inputsContainer .recipeInputs input[type="time"]::-webkit-datetime-edit-ampm-field {
+      display: none; }
+    .inputsContainer .recipeInputs textarea {
+      width: 300px;
+      height: 100px;
+      resize: vertical; }
+
+.formBtns {
+  float: right;
+  margin: 10px 20px; }
