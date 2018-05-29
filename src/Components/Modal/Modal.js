@@ -10,6 +10,7 @@ class Modal extends React.Component{
 		};
 		this.toggle = this.toggle.bind(this);
 		this.onFieldChange = this.onFieldChange.bind(this);
+		this.onFormSubmit = this.onFormSubmit.bind(this);
 	}
 
 	toggle() {
@@ -26,11 +27,15 @@ class Modal extends React.Component{
     this.props.onChange(fieldName, fieldValue);
 	}
 
+	onFormSubmit(e) {
+		this.props.onSubmit(e);
+	}
+
 	render() {
 		const modal = this.state.isOpen ? 
 					(
 						<div className='modal' >
-							<form>
+							<form onSubmit={this.onFormSubmit}>
 						  	<div className="inputsContainer">
 								  	<ImageUploader />
 									    <div className="recipeInputs">

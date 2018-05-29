@@ -52,19 +52,40 @@ class RecipeSaver extends React.Component {
 			]
 		}
 		this.onChange = this.onChange.bind(this);
+		this.onSubmit = this.onSubmit.bind(this);
 	}
 
 	onChange(field, value) {
 		this.setState({
 			[field]: value
 		});
-		console.log(this.state[field])
+	}
+
+	onSubmit(e) {
+		e.preventDefault();
+		const ingredients = this.state.ingredients.split(/\n/);
+		const directions = this.state.directions.split(/\n/);
+		const recipeTemplate = {
+			recipeName: this.state.recipeName,
+			cookTime: this.state.cookTime,
+			ingredients: ingredients,
+			directions: directions,
+			dishImg: this.state.dishImg
+		}
+
+		const recipes = this.state.recipes.slice();
+		recipes.push(recipeTemplate)
+
+		this.setState({
+			recipes: recipes
+		})
+
 	}
 
 	render() {
 		return (
 			<div>
-				<Modal onChange={this.onChange} />
+				<Modal onChange={this.onChange} onSubmit={this.onSubmit} />
 				<RecipesRender recipes={this.state.recipes} />
 			</div>
 			)
