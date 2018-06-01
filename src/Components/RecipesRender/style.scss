@@ -20,4 +20,26 @@
 				font-weight: bold;
 			}
 	 	}
+	 	.recipeButtons {
+	 		margin: 10px;
+	 		.btn-dlt, .btn-edit {
+		    width: 75px;
+	 			height: 35px;
+	 			margin-bottom: 10px;
+	 		}
+	 		.btn-dlt {
+	 			float: right;
+	 			background-color: red;
+		    border: none;
+		    color: white;
+	     font-size: 19px;
+	 		}
+	 		.btn-edit {
+	 			float: left;
+		    background-color: #1ea014;
+		    border: none;
+		    color: white;
+		    font-size: 19px;
+	 		}
+	 	}
  }

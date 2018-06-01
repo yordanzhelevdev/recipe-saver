@@ -1,28 +1,39 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import "./style.css";
 
+function RecipesRender(props) {
+  return (
+    <div className="recipeContainer">
+      {props.recipes.map((recipe, i) => {
+        const bg = {
+          background: `url(${recipe.dishImg})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "100%",
+          backgroundPosition: "center"
+        };
 
-function RecipesRender (props) {
-	return (
-		<div className="recipeContainer">
-			{props.recipes.map(recipe => {
-				const bg = {
-					background: `url(${recipe.dishImg})`,
-					backgroundRepeat: 'no-repeat',
-					backgroundSize: 'cover'
-				}
-
-				return (
-					<div>
-						<div className="recipeBody" style={bg}></div>
-						<div className="recipeFooter">
-							<p>{recipe.recipeName}</p>
-						</div>
-					</div>
-				)
-			})}
-		</div>
-	)
+        return (
+          <div key={`${recipe.recipeName}_${i}`}>
+            <div className="recipeBody" style={bg} />
+            <div className="recipeFooter">
+              <p>{recipe.recipeName}</p>
+            </div>
+            <div className="recipeButtons">
+              <button
+                className="btn-dlt"
+                onClick={e => {
+                  props.deleteRecipe(e, i);
+                }}
+              >
+                Delete
+              </button>
+              <button className="btn-edit">Edit</button>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
 export default RecipesRender;

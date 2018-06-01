@@ -23,6 +23,7 @@ class Modal extends React.Component {
     const fieldName = event.target.name;
     const fieldValue = event.target.value;
     this.props.onChange(fieldName, fieldValue);
+    console.log(fieldValue);
   }
 
   onFormSubmit(event) {
@@ -65,13 +66,6 @@ class Modal extends React.Component {
               <input
                 name="recipeName"
                 type="text"
-                onChange={this.onFieldChange}
-              />
-              <label>Cook Time</label>
-              <input
-                name="cookTime"
-                type="time"
-                step="1"
                 onChange={this.onFieldChange}
               />
               <label>Ingredients</label>

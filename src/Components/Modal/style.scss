@@ -2,7 +2,8 @@
 	width: 40%;
 	height: 50%;
 	border: 2px solid black;
-	background-color: pink;
+	background-color: gray;
+  color: white;
 	position: absolute;
   margin: auto;
   position: absolute;
@@ -20,7 +21,6 @@
 	display: block;
 }
 
-
 .inputsContainer {
     display: flex;
     justify-content: space-around;
@@ -29,22 +29,17 @@
     display: flex;
     flex-direction: column;
 
-    input[type="text"], input[type="time"] {
+    input[type="text"] {
       width: 250px;
       height: 35px;
       font-size: 25px;
-    }
-
-    input[type="time"] {
-      &::-webkit-datetime-edit-ampm-field{ 
-        display: none;
-      }
     }
 
     textarea{
       width: 300px;
       height: 100px;
       resize: vertical;
+      font-size:17px;
     }
   }
 }
