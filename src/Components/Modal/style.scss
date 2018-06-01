@@ -53,3 +53,23 @@
   float: right;
   margin: 10px 20px;
 }
+
+.imageContainer {
+  width: 250px;
+  height: 250px;
+  border: 1px solid black;
+  position: relative;
+  label{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 90px;
+    color: #09860e;
+  }
+  input {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+}
