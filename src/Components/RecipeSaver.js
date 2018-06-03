@@ -69,6 +69,7 @@ class RecipeSaver extends React.Component {
     this.onSubmit = this.onSubmit.bind(this);
     this.onPhotoUpload = this.onPhotoUpload.bind(this);
     this.deleteRecipe = this.deleteRecipe.bind(this);
+    this.editRecipe = this.editRecipe.bind(this);
   }
 
   onChange(field, value) {
@@ -89,7 +90,6 @@ class RecipeSaver extends React.Component {
     const directions = this.state.directions.split(/\n/);
     const recipeTemplate = {
       recipeName: this.state.recipeName,
-      cookTime: this.state.cookTime,
       ingredients: ingredients,
       directions: directions,
       dishImg: this.state.dishImg
@@ -99,6 +99,10 @@ class RecipeSaver extends React.Component {
     recipes.push(recipeTemplate);
 
     this.setState({
+      recipeName: "",
+      ingredients: "",
+      directions: "",
+      dishImg: null,
       recipes: recipes
     });
   }
@@ -109,6 +113,10 @@ class RecipeSaver extends React.Component {
     this.setState({ recipes: recipes });
   }
 
+  editRecipe(e, index) {
+    console.log(this.state.recipes[index]);
+  }
+
   render() {
     return (
       <div>
@@ -116,10 +124,12 @@ class RecipeSaver extends React.Component {
           onChange={this.onChange}
           onSubmit={this.onSubmit}
           onPhotoUpload={this.onPhotoUpload}
+          recipes={this.state.recipes}
         />
         <RecipesRender
           recipes={this.state.recipes}
           deleteRecipe={this.deleteRecipe}
+          onEdit={this.editRecipe}
         />
       </div>
     );

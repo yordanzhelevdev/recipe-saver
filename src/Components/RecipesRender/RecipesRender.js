@@ -27,7 +27,14 @@ function RecipesRender(props) {
               >
                 Delete
               </button>
-              <button className="btn-edit">Edit</button>
+              <button
+                className="btn-edit"
+                onClick={(e, index) => {
+                  props.onEdit(e, i);
+                }}
+              >
+                Edit
+              </button>
             </div>
           </div>
         );

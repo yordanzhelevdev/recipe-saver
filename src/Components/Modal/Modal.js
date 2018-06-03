@@ -5,7 +5,7 @@ class Modal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpen: true
+      isOpen: false
     };
     this.toggle = this.toggle.bind(this);
     this.onFieldChange = this.onFieldChange.bind(this);
@@ -83,8 +83,8 @@ class Modal extends React.Component {
             </div>
           </div>
           <div className="formBtns">
-            <input type="reset" />
-            <input type="submit" />
+            <input type="submit" value="Save" />
+            <input type="reset" value="Clear" />
           </div>
         </form>
       </div>
