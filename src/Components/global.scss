@@ -1,3 +1,49 @@
 html,body{
 	margin: 0;
 }
+
+.recipeContainer{
+ 	display: flex;
+ 	flex-direction:row;
+  width: 75%;
+ 	margin: 10px auto;
+ 	border: 1px solid black;
+ 	flex-wrap: wrap;
+	 	.recipeBody{
+	 		width:280px;
+	 		height: 280px;
+	 	  margin: 10px;
+	 	}
+	 	.recipeFooter{
+			margin:10px;
+	 		max-width:280px;
+			p {
+				margin-top: 10px;
+				font-size: 18px;
+				color: #222;
+				font-weight: bold;
+			}
+	 	}
+	 	.recipeButtons {
+	 		margin: 10px;
+	 		.btn-dlt, .btn-edit {
+		    width: 75px;
+	 			height: 35px;
+	 			margin-bottom: 10px;
+	 		}
+	 		.btn-dlt {
+	 			float: right;
+	 			background-color: red;
+		    border: none;
+		    color: white;
+	     font-size: 19px;
+	 		}
+	 		.btn-edit {
+	 			float: left;
+		    background-color: #1ea014;
+		    border: none;
+		    color: white;
+		    font-size: 19px;
+	 		}
+	 	}
+ }

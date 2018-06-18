@@ -1,6 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import RecipeSaver from './Components/RecipeSaver';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./Components/App";
 
-
-ReactDOM.render(<RecipeSaver />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
