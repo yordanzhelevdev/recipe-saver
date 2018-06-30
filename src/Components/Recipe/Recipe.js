@@ -1,6 +1,16 @@
 import React from "react";
 
 class Recipe extends React.Component {
+  constructor(props) {
+    super(props);
+    this.enableEditRecipe = this.enableEditRecipe.bind(this);
+  }
+
+  enableEditRecipe() {
+    const index = this.props.index;
+    this.props.editRecipe(index);
+  }
+
   render() {
     const { recipeName, ingredients, directions, dishImg } = this.props.recipe;
     const bg = {
@@ -24,7 +34,9 @@ class Recipe extends React.Component {
           >
             Delete
           </button>
-          <button className="btn-edit">Edit</button>
+          <button className="btn-edit" onClick={this.enableEditRecipe}>
+            Edit
+          </button>
         </div>
       </div>
     );
@@ -32,40 +44,3 @@ class Recipe extends React.Component {
 }
 
 export default Recipe;
-
-// {Object.keys(props.recipes).map((recipe, i) => {
-//      console.log(recipe.dishImg);
-//      const bg = {
-//        background: `url(${recipe.dishImg})`,
-//        backgroundRepeat: "no-repeat",
-//        backgroundSize: "100%",
-//        backgroundPosition: "center"
-//      };
-
-//      return (
-//        <div key={`${recipe.recipeName}_${i}`}>
-//          <div className="recipeBody" style={bg} />
-//          <div className="recipeFooter">
-//            <p>{recipe.recipeName}</p>
-//          </div>
-//          <div className="recipeButtons">
-//            <button
-//              className="btn-dlt"
-//              onClick={e => {
-//                props.deleteRecipe(e, i);
-//              }}
-//            >
-//              Delete
-//            </button>
-//            <button
-//              className="btn-edit"
-//              onClick={(e, index) => {
-//                props.onEdit(e, i);
-//              }}
-//            >
-//              Edit
-//            </button>
-//          </div>
-//        </div>
-//      );
-//    })}
