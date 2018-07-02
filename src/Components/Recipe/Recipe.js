@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 class Recipe extends React.Component {
   constructor(props) {
@@ -12,17 +13,14 @@ class Recipe extends React.Component {
   }
 
   render() {
-    const { recipeName, ingredients, directions, dishImg } = this.props.recipe;
+    const { recipeName, dishImg } = this.props.recipe;
     const bg = {
-      background: `url(${dishImg})`,
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "100%",
-      backgroundPosition: "center"
+      background: `url(${dishImg})`
     };
     const index = this.props.index;
 
     return (
-      <div>
+      <div className="recipeReview">
         <div className="recipeBody" style={bg} />
         <div className="recipeFooter">
           <p>{recipeName}</p>

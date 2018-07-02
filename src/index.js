@@ -1,13 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./Components/App";
+import ViewRecipe from "./Components/ViewRecipe/ViewRecipe";
 
 import { BrowserRouter, Route } from "react-router-dom";
 
 const Root = () => {
   return (
     <BrowserRouter>
-      <Route exact path="/" component={App} />
+      <div>
+        <Route exact path="/" component={App} />
+        <Route path="/recipe/:recipeId" component={ViewRecipe} />
+      </div>
     </BrowserRouter>
   );
 };
