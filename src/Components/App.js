@@ -34,12 +34,6 @@ class App extends React.Component {
     });
   }
 
-  // onChange(field, value) {
-  //   this.setState({
-  //     [field]: value
-  //   });
-  // }
-
   addRecipe(recipe) {
     const recipes = { ...this.state.recipes };
     const timeStamp = Date.now();
@@ -85,7 +79,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.toggleModal}>Add Recipe</button>
         <Modal isOpen={this.state.isOpen} closeTheModal={this.closeTheModal}>
           {this.state.isOpen && this.state.isEdit ? (
             <EditRecipeInputs
@@ -110,6 +103,9 @@ class App extends React.Component {
             );
           })}
         </div>
+        <button className="btn-addRecipe" onClick={this.toggleModal}>
+          Add Recipe
+        </button>
       </div>
     );
   }
