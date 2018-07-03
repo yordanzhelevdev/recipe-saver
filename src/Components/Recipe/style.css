@@ -20,18 +20,26 @@
   .recipeReview .recipeButtons {
     margin: 10px; }
     .recipeReview .recipeButtons .btn-dlt, .recipeReview .recipeButtons .btn-edit {
-      width: 75px;
-      height: 35px;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      border: 3px double #ffffff;
+      padding: 6px 20px;
+      transition: background .5s; }
+      .recipeReview .recipeButtons .btn-dlt:hover, .recipeReview .recipeButtons .btn-edit:hover {
+        background-repeat: no-repeat;
+        background-position: center;
+        color: transparent;
+        cursor: pointer; }
     .recipeReview .recipeButtons .btn-dlt {
       float: right;
       background-color: red;
-      border: none;
       color: white;
       font-size: 19px; }
+      .recipeReview .recipeButtons .btn-dlt:hover {
+        background-image: url("../../Images/rubbish-bin.png"); }
     .recipeReview .recipeButtons .btn-edit {
       float: left;
       background-color: #1ea014;
-      border: none;
       color: white;
       font-size: 19px; }
+      .recipeReview .recipeButtons .btn-edit:hover {
+        background-image: url("../../Images/edit.png"); }
