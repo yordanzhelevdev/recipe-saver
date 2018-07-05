@@ -6,18 +6,16 @@ class Modal extends React.Component {
     const isOpen = this.props.isOpen;
 
     return (
-      <div className={isOpen ? "isOpen" : ""}>
-        {isOpen && (
-          <div className="modal">
-            <button
-              className="close"
-              onClick={() => this.props.closeTheModal()}
-            >
-              Close
-            </button>
-            {this.props.children}
+      <div className="modal" style={{ display: isOpen ? "block" : "" }}>
+        <div className="modal-content">
+          <div className="modal-header">
+            <span className="close" onClick={() => this.props.closeTheModal()}>
+              &times;
+            </span>
           </div>
-        )}
+          <div className="modal-body">{this.props.children}</div>
+          <div className="modal-footer" />
+        </div>
       </div>
     );
   }

@@ -7,18 +7,18 @@ body {
 }
 
 .recipeContainer{
- 	display: flex;
- 	flex-direction:row;
- 	margin: 10px auto;
- 	border: 1px solid black;
- 	flex-wrap: wrap;
- 	width: 90%;
- 	border: 10px solid transparent;
-    border-image: url(../Images/border-icon.png) 80 round;
+	 	display: flex;
+	 	flex-direction:row;
+	 	margin: 10px auto;
+	 	border: 1px solid black;
+	 	flex-wrap: wrap;
+	 	width: 90%;
+	 	border: 10px solid transparent;
+    border-image: url('../Images/border-icon.png') 80 round;
  }
 
  .btn-addRecipe {
-	display: block;
+		display: block;
     margin: 0 auto;
     padding: 15px;
     color: white;
@@ -28,7 +28,7 @@ body {
     font-size: 12px;
     font-weight: bold;
     outline: none;
- 	transition: all .5s;
+ 		transition: all .5s;
  }
  .btn-addRecipe:hover {
 	background-image: url('../Images/add.png');
