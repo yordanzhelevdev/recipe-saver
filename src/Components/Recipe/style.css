@@ -1,45 +1,40 @@
 .recipeReview {
   background: bisque;
-  margin: 7px;
-  flex: 1 0 auto;
-  max-width: 16%; }
-  .recipeReview .recipeBody {
-    height: 200px;
-    margin: 10px;
-    background-repeat: no-repeat !important;
-    background-size: contain !important;
-    background-position: center !important; }
-  .recipeReview .recipeFooter {
-    margin: 10px;
-    max-width: 280px; }
-    .recipeReview .recipeFooter p {
-      margin-top: 10px;
-      font-size: 18px;
-      color: #222;
-      font-weight: bold; }
-  .recipeReview .recipeButtons {
+  display: flex;
+  flex-direction: column;
+  width: 401px;
+  margin: 10px; }
+  .recipeReview .recipeBody .recipeImage {
+    width: 100%;
+    max-width: 401px; }
+  .recipeReview .recipeBody p {
+    margin-left: 10px;
+    font-size: 18px;
+    color: #222;
+    font-weight: bold; }
+  .recipeReview .recipeFooter .recipeButtons {
     margin: 10px; }
-    .recipeReview .recipeButtons .btn-dlt, .recipeReview .recipeButtons .btn-edit {
+    .recipeReview .recipeFooter .recipeButtons .btn-dlt, .recipeReview .recipeFooter .recipeButtons .btn-edit {
       margin-bottom: 10px;
       border: 3px double #ffffff;
-      padding: 6px 20px;
+      padding: 8px 20px;
       transition: background .5s; }
-      .recipeReview .recipeButtons .btn-dlt:hover, .recipeReview .recipeButtons .btn-edit:hover {
+      .recipeReview .recipeFooter .recipeButtons .btn-dlt:hover, .recipeReview .recipeFooter .recipeButtons .btn-edit:hover {
         background-repeat: no-repeat;
         background-position: center;
         color: transparent;
         cursor: pointer; }
-    .recipeReview .recipeButtons .btn-dlt {
+    .recipeReview .recipeFooter .recipeButtons .btn-dlt {
       float: right;
       background-color: red;
       color: white;
       font-size: 19px; }
-      .recipeReview .recipeButtons .btn-dlt:hover {
+      .recipeReview .recipeFooter .recipeButtons .btn-dlt:hover {
         background-image: url("../../Images/rubbish-bin.png"); }
-    .recipeReview .recipeButtons .btn-edit {
+    .recipeReview .recipeFooter .recipeButtons .btn-edit {
       float: left;
       background-color: #1ea014;
       color: white;
       font-size: 19px; }
-      .recipeReview .recipeButtons .btn-edit:hover {
+      .recipeReview .recipeFooter .recipeButtons .btn-edit:hover {
         background-image: url("../../Images/edit.png"); }

@@ -9,9 +9,11 @@ class Modal extends React.Component {
       <div className="modal" style={{ display: isOpen ? "block" : "" }}>
         <div className="modal-content">
           <div className="modal-header">
-            <span className="close" onClick={() => this.props.closeTheModal()}>
-              &times;
-            </span>
+            <h2>{this.props.modalType}</h2>
+            <span
+              className="close"
+              onClick={() => this.props.closeTheModal()}
+            />
           </div>
           <div className="modal-body">{this.props.children}</div>
           <div className="modal-footer" />

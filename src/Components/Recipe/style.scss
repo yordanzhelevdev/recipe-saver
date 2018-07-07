@@ -1,31 +1,28 @@
 	.recipeReview {
 		background: bisque;
-    margin: 7px;
-    flex: 1 0 auto;
-    max-width: 16%;
+    display: flex;
+    flex-direction: column;
+    width: 401px;
+    margin: 10px;
 		.recipeBody{
-	 		height: 200px;
-	 	  margin: 10px;
-			background-repeat: no-repeat !important;
-      background-size: contain !important;
-      background-position: center !important;
-	 	}
-	 	.recipeFooter{
-			margin:10px;
-	 		max-width:280px;
+	 		.recipeImage {
+	 			width: 100%;
+    		max-width: 401px;
+	 		}
 			p {
-				margin-top: 10px;
+				margin-left: 10px;
 				font-size: 18px;
 				color: #222;
 				font-weight: bold;
 			}
 	 	}
-	 	.recipeButtons {
+	 	.recipeFooter{
+	 			 	.recipeButtons {
 	 		margin: 10px;
 	 		.btn-dlt, .btn-edit {
-		       margin-bottom: 10px;
+		      margin-bottom: 10px;
 		    	border: 3px double #ffffff;
-		    	padding: 6px 20px;
+		    	padding: 8px 20px;
 		    	transition: background .5s;
 		    	&:hover {
 		    		background-repeat: no-repeat;
@@ -51,8 +48,10 @@
 			    &:hover{
 					background-image: url("../../Images/edit.png");
 	     		}
-	 		}
-	 	}	
+	 			}
+	 		}	
+	 	}
+
 	 }
 
 	

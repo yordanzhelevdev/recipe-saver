@@ -14,27 +14,26 @@ class Recipe extends React.Component {
 
   render() {
     const { recipeName, dishImg } = this.props.recipe;
-    const bg = {
-      background: `url(${dishImg})`
-    };
     const index = this.props.index;
 
     return (
       <div className="recipeReview">
-        <div className="recipeBody" style={bg} />
-        <div className="recipeFooter">
+        <div className="recipeBody">
+          <img src={dishImg} className="recipeImage" alt={recipeName} />
           <p>{recipeName}</p>
         </div>
-        <div className="recipeButtons">
-          <button
-            className="btn-dlt"
-            onClick={() => this.props.deleteRecipe(index)}
-          >
-            Delete
-          </button>
-          <button className="btn-edit" onClick={this.enableEditRecipe}>
-            Edit
-          </button>
+        <div className="recipeFooter">
+          <div className="recipeButtons">
+            <button
+              className="btn-dlt"
+              onClick={() => this.props.deleteRecipe(index)}
+            >
+              Delete
+            </button>
+            <button className="btn-edit" onClick={this.enableEditRecipe}>
+              Edit
+            </button>
+          </div>
         </div>
       </div>
     );

@@ -17,7 +17,7 @@
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */ }
   .modal .modal-content {
-    background-color: #fefefe;
+    background-color: #FBD1A2;
     margin: auto;
     padding: 0;
     width: 30%;
@@ -26,38 +26,28 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
-    .modal .modal-content .modal-header .close {
-      color: black;
-      float: right;
-      font-size: 28px;
-      font-weight: bold; }
-      .modal .modal-content .modal-header .close:hover, .modal .modal-content .modal-header .close:focus {
-        /*color: #000;*/
-        text-decoration: none;
-        cursor: pointer; }
+    .modal .modal-content .modal-header {
+      padding: 2px 16px;
+      background-color: #e88554; }
+      .modal .modal-content .modal-header h2 {
+        color: azure;
+        font-weight: normal;
+        font-size: 25px; }
+      .modal .modal-content .modal-header .close {
+        display: inline-block;
+        background: url("../../Images/letter-x.png") no-repeat center;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 5px;
+        top: 5px; }
+        .modal .modal-content .modal-header .close:hover, .modal .modal-content .modal-header .close:focus {
+          cursor: pointer; }
+  .modal .modal-body {
+    background-color: #FBD1A2; }
 
 .closed {
   display: none; }
 
 .opened {
   display: block; }
-
-.inputsContainer {
-  display: flex;
-  justify-content: space-around; }
-  .inputsContainer .recipeInputs {
-    display: flex;
-    flex-direction: column; }
-    .inputsContainer .recipeInputs input[type="text"] {
-      width: 100%;
-      height: 35px;
-      font-size: 25px; }
-    .inputsContainer .recipeInputs textarea {
-      width: 100%;
-      height: 100px;
-      resize: vertical;
-      font-size: 17px; }
-
-.formBtns {
-  text-align: center;
-  margin: 10px 20px; }

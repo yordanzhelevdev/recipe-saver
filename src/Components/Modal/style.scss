@@ -11,7 +11,7 @@
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 
     .modal-content {
-      background-color: #fefefe;
+      background-color: #FBD1A2;
       margin: auto;
       padding: 0;
       width: 30%;
@@ -22,20 +22,26 @@
       transform: translate(-50%, -50%);
 
       .modal-header {
+          padding: 2px 16px;
+          background-color: #e88554;
+          h2 { color: azure; font-weight: normal; font-size: 25px; }
         .close {
-        color: black;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-          &:hover, &:focus { /*color: #000;*/ text-decoration: none; cursor: pointer; }
+          display: inline-block;
+          background: url('../../Images/letter-x.png') no-repeat center;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          right: 5px;
+          top: 5px;
+          &:hover, &:focus { cursor: pointer; }
         }
       }
     }
-    .modal-body {}
+    .modal-body {
+      background-color: #FBD1A2;
+    }
     .modal-footer {}
 }
-
-
 
 .closed{
 	display: none;
@@ -43,32 +49,4 @@
 
 .opened {
 	display: block;
-}
-
-.inputsContainer {
-    display: flex;
-    justify-content: space-around;
-
-  .recipeInputs {
-    display: flex;
-    flex-direction: column;
-
-    input[type="text"] {
-      width: 100%;
-      height: 35px;
-      font-size: 25px;
-    }
-
-    textarea{
-      width: 100%;
-      height: 100px;
-      resize: vertical;
-      font-size:17px;
-    }
-  }
-}
-
-.formBtns {
-  text-align: center;
-  margin: 10px 20px;
 }

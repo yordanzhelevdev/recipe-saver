@@ -79,7 +79,20 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Modal isOpen={this.state.isOpen} closeTheModal={this.closeTheModal}>
+        <header className="site-header">
+          <h1>
+            <span role="img" aria-label="meat on bone">
+              🍖
+            </span>Recipe Saver<span role="img" aria-label="meat on bone">
+              🍖
+            </span>
+          </h1>
+        </header>
+        <Modal
+          isOpen={this.state.isOpen}
+          closeTheModal={this.closeTheModal}
+          modalType={this.state.isEdit ? "Edit Recipe" : "Add Recipe"}
+        >
           {this.state.isOpen && this.state.isEdit ? (
             <EditRecipeInputs
               recipes={this.state.recipes}
