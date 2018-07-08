@@ -12,10 +12,14 @@ class CreateRecipeInputs extends React.Component {
     const ingredients = this.ingredients.value.split(/\n/);
     const directions = this.directions.value.split(/\n/);
     const recipe = {
-      recipeName: this.recipeName.value,
+      recipeName:
+        this.recipeName.value !== "" ? this.recipeName.value : "Recipe",
       ingredients: ingredients,
       directions: directions,
-      dishImg: this.dishImg.value
+      dishImg:
+        this.dishImg.value !== ""
+          ? this.dishImg.value
+          : "https://i.imgur.com/WNehOUw.png"
     };
     this.props.addRecipe(recipe);
     this.recipeForm.reset();
