@@ -6,6 +6,8 @@ import EditRecipeInputs from "./EditRecipeInputs/EditRecipeInputs";
 import sampleData from "../sample-data";
 import "./global.css";
 
+import { Link } from "react-router-dom";
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -106,13 +108,23 @@ class App extends React.Component {
         <div className="recipeContainer">
           {Object.keys(this.state.recipes).map(key => {
             return (
-              <Recipe
+              <Link
                 key={key}
-                index={key}
-                recipe={this.state.recipes[key]}
-                deleteRecipe={this.deleteRecipe}
-                editRecipe={this.editRecipe}
-              />
+                to={{
+                  pathname: `/view/${key}`,
+                  state: {
+                    recipe: this.state.recipes[key]
+                  }
+                }}
+              >
+                <Recipe
+                  key={key}
+                  index={key}
+                  recipe={this.state.recipes[key]}
+                  deleteRecipe={this.deleteRecipe}
+                  editRecipe={this.editRecipe}
+                />
+              </Link>
             );
           })}
         </div>
