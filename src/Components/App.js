@@ -4,6 +4,7 @@ import Modal from "./Modal/Modal";
 import CreateRecipeInputs from "./CreateRecipeInputs/CreateRecipeInputs";
 import EditRecipeInputs from "./EditRecipeInputs/EditRecipeInputs";
 import sampleData from "../sample-data";
+import base from "../base";
 import "./global.css";
 
 import { Link } from "react-router-dom";
@@ -26,8 +27,14 @@ class App extends React.Component {
   }
 
   //Right before the component is rendered
-  componentWillMount() {
+  componentWillMount() {}
+
+  componentDidMount() {
     this.loadSampleData();
+    // base.syncState('recipes', {
+    //   context: this,
+    //   state: 'recipes'
+    // });
   }
 
   loadSampleData() {
