@@ -1,6 +1,8 @@
 import React from "react";
 import "./style.css";
 
+import { Link } from "react-router-dom";
+
 class Recipe extends React.Component {
   constructor(props) {
     super(props);
@@ -18,10 +20,19 @@ class Recipe extends React.Component {
 
     return (
       <div className="recipeReview">
-        <div className="recipeBody">
-          <img src={dishImg} className="recipeImage" alt={recipeName} />
-          <p>{recipeName}</p>
-        </div>
+        <Link
+          to={{
+            pathname: `/view/${index}`,
+            state: {
+              recipe: this.props.recipe
+            }
+          }}
+        >
+          <div className="recipeBody">
+            <img src={dishImg} className="recipeImage" alt={recipeName} />
+            <p>{recipeName}</p>
+          </div>
+        </Link>
         <div className="recipeFooter">
           <div className="recipeButtons">
             <button

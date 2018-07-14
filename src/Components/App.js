@@ -7,8 +7,6 @@ import sampleData from "../sample-data";
 import base from "../base";
 import "./global.css";
 
-import { Link } from "react-router-dom";
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -112,23 +110,13 @@ class App extends React.Component {
         <div className="recipeContainer">
           {Object.keys(this.state.recipes).map(key => {
             return (
-              <Link
+              <Recipe
                 key={key}
-                to={{
-                  pathname: `/view/${key}`,
-                  state: {
-                    recipe: this.state.recipes[key]
-                  }
-                }}
-              >
-                <Recipe
-                  key={key}
-                  index={key}
-                  recipe={this.state.recipes[key]}
-                  deleteRecipe={this.deleteRecipe}
-                  editRecipe={this.editRecipe}
-                />
-              </Link>
+                index={key}
+                recipe={this.state.recipes[key]}
+                deleteRecipe={this.deleteRecipe}
+                editRecipe={this.editRecipe}
+              />
             );
           })}
         </div>
