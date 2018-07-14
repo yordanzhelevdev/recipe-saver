@@ -26,15 +26,12 @@ class App extends React.Component {
     this.closeTheModal = this.closeTheModal.bind(this);
   }
 
-  //Right before the component is rendered
-  componentWillMount() {}
-
   componentDidMount() {
+    base.syncState("recipes", {
+      context: this,
+      state: "recipes"
+    });
     this.loadSampleData();
-    // base.syncState('recipes', {
-    //   context: this,
-    //   state: 'recipes'
-    // });
   }
 
   loadSampleData() {

@@ -15,7 +15,6 @@ class ViewRecipe extends React.Component {
   }
 
   render() {
-    console.log(this.recipe);
     return (
       <div>
         <h1>{this.state.recipe.recipeName}</h1>
@@ -24,13 +23,15 @@ class ViewRecipe extends React.Component {
           {this.state.recipe &&
             this.state.recipe.ingredients &&
             this.state.recipe.ingredients.map(ingredient => (
-              <li>{ingredient}</li>
+              <li key={ingredient}>{ingredient}</li>
             ))}
         </ul>
         <ul>
           {this.state.recipe &&
             this.state.recipe.directions &&
-            this.state.recipe.directions.map(direction => <li>{direction}</li>)}
+            this.state.recipe.directions.map(direction => (
+              <li key={direction}>{direction}</li>
+            ))}
         </ul>
       </div>
     );
