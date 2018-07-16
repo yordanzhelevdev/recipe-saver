@@ -23,9 +23,11 @@ class App extends React.Component {
     this.toggleModal = this.toggleModal.bind(this);
     this.closeTheModal = this.closeTheModal.bind(this);
     this.loadSampleData = this.loadSampleData.bind(this);
+    this.onEscapePress = this.onEscapePress.bind(this);
   }
 
   componentDidMount() {
+    document.addEventListener("keydown", this.onEscapePress);
     base.syncState("recipes", {
       context: this,
       state: "recipes"
@@ -81,6 +83,12 @@ class App extends React.Component {
       isOpen: false,
       isEdit: false
     });
+  }
+
+  onEscapePress(e) {
+    if (this.state.isOpen && e.key === "Escape") {
+      this.closeTheModal();
+    }
   }
 
   render() {

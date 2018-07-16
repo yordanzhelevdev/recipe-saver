@@ -1,0 +1,17 @@
+.btn-goBack {
+    border: 3px double #ffffff;
+    padding: 8px 20px;
+    -webkit-transition: background .5s;
+    -o-transition: background .5s;
+    transition: background .5s;
+    font-size: 15px;
+    color: white;
+    background-color: inherit;
+	&:hover { background-repeat: no-repeat; background-position: center; color: transparent; cursor: pointer; 
+		background-image: url("../../Images/go-back.png"); }
+}
+
+.viewRecipe-container {
+    width: 60%;
+    margin: 0 auto;
+}
