@@ -22,7 +22,14 @@
     background-color: #ffbd9d;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    height: auto;
+    min-width: 0; }
+    .viewRecipe-container .recipePhoto-container img {
+      width: 450px;
+      max-width: 100%;
+      max-height: 351px;
+      margin: 20px; }
   .viewRecipe-container .ingrAndDirection-container {
     display: flex; }
     .viewRecipe-container .ingrAndDirection-container .ingredients-container, .viewRecipe-container .ingrAndDirection-container .direction-container {
