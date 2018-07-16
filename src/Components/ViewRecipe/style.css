@@ -17,3 +17,13 @@
 .viewRecipe-container {
   width: 60%;
   margin: 0 auto; }
+  .viewRecipe-container .recipePhoto-container {
+    height: 400px;
+    background-color: #ffbd9d;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .viewRecipe-container .ingrAndDirection-container {
+    display: flex; }
+    .viewRecipe-container .ingrAndDirection-container .ingredients-container, .viewRecipe-container .ingrAndDirection-container .direction-container {
+      width: 50%; }

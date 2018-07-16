@@ -14,4 +14,17 @@
 .viewRecipe-container {
     width: 60%;
     margin: 0 auto;
+
+  	.recipePhoto-container {
+	  	height: 400px;
+	    background-color: #ffbd9d;
+	    display: flex;
+	    justify-content: center;
+   	 	align-items: center;
+  	}
+
+  	.ingrAndDirection-container {
+  		display: flex;
+  		.ingredients-container, .direction-container { width: 50%; }
+  	}
 }

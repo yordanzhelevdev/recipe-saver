@@ -44,7 +44,6 @@ class App extends React.Component {
     const recipes = { ...this.state.recipes };
     const timeStamp = Date.now();
     recipes[`recipe-${timeStamp}`] = recipe;
-
     this.setState({ recipes, isOpen: false });
   }
 
