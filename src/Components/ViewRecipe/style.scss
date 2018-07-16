@@ -29,6 +29,13 @@
 
   	.ingrAndDirection-container {
   		display: flex;
-  		.ingredients-container, .direction-container { width: 50%; }
+  		.ingredients-container, .direction-container { 
+  			width: 50%; 
+  			ul { 
+  				padding-left: 0; 
+  				li { list-style: none; border-bottom: 1px solid #d7d7d9; padding: 12px 0; font-size: 17px; }
+  			}
+  		}
+  		.ingredients-container { margin-right: 5%; }
   	}
 }

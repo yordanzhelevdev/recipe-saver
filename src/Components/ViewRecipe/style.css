@@ -34,3 +34,12 @@
     display: flex; }
     .viewRecipe-container .ingrAndDirection-container .ingredients-container, .viewRecipe-container .ingrAndDirection-container .direction-container {
       width: 50%; }
+      .viewRecipe-container .ingrAndDirection-container .ingredients-container ul, .viewRecipe-container .ingrAndDirection-container .direction-container ul {
+        padding-left: 0; }
+        .viewRecipe-container .ingrAndDirection-container .ingredients-container ul li, .viewRecipe-container .ingrAndDirection-container .direction-container ul li {
+          list-style: none;
+          border-bottom: 1px solid #d7d7d9;
+          padding: 12px 0;
+          font-size: 17px; }
+    .viewRecipe-container .ingrAndDirection-container .ingredients-container {
+      margin-right: 5%; }
