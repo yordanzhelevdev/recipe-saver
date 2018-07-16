@@ -22,6 +22,7 @@ class App extends React.Component {
     this.updateRecipe = this.updateRecipe.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
     this.closeTheModal = this.closeTheModal.bind(this);
+    this.loadSampleData = this.loadSampleData.bind(this);
   }
 
   componentDidMount() {
@@ -29,7 +30,6 @@ class App extends React.Component {
       context: this,
       state: "recipes"
     });
-    this.loadSampleData();
   }
 
   loadSampleData() {
@@ -47,9 +47,12 @@ class App extends React.Component {
   }
 
   deleteRecipe(index) {
+    // 1. take a copy of state
     const recipes = { ...this.state.recipes };
-    delete recipes[index];
-    this.setState({ recipes: recipes });
+    // 2. update the state
+    recipes[index] = null;
+    // 3.  update state
+    this.setState({ recipes });
   }
 
   editRecipe(index) {
@@ -122,6 +125,9 @@ class App extends React.Component {
         </div>
         <button className="btn-addRecipe" onClick={this.toggleModal}>
           Add Recipe
+        </button>
+        <button className="btn-loadSampleData" onClick={this.loadSampleData}>
+          Load Sample Data
         </button>
       </div>
     );
