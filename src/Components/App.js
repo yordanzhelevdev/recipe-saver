@@ -15,7 +15,8 @@ class App extends React.Component {
       recipes: {},
       isEdit: false,
       isOpen: false,
-      editableRecipe: {}
+      editableRecipe: {},
+      authenticated: false
     };
     this.addRecipe = this.addRecipe.bind(this);
     this.deleteRecipe = this.deleteRecipe.bind(this);
@@ -94,7 +95,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header authenticated={this.state.authenticated} />
         <Modal
           isOpen={this.state.isOpen}
           closeTheModal={this.closeTheModal}

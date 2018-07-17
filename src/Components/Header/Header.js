@@ -1,6 +1,8 @@
 import React from "react";
 import "./style.css";
 
+import { Link } from "react-router-dom";
+
 class Header extends React.Component {
   render() {
     return (
@@ -13,9 +15,17 @@ class Header extends React.Component {
           </span>
         </h1>
         <div className="header-buttons">
-          <button className="btn-loadSampleData" onClick={this.loadSampleData}>
-            Load Sample Data
-          </button>
+          <Link to="/login" className="btn-loginOrRegister">
+            Login/Register
+          </Link>
+          {this.props.authenticated && (
+            <button
+              className="btn-loadSampleData"
+              onClick={this.loadSampleData}
+            >
+              Load Sample Data
+            </button>
+          )}
         </div>
       </header>
     );
