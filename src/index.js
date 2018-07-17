@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./Components/App";
 import ViewRecipe from "./Components/ViewRecipe/ViewRecipe";
 import NoMatch from "./Components/NoMatch/NoMatch";
+import Login from "./Components/Login/Login";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
@@ -11,6 +12,7 @@ const Root = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={App} />
+        <Route path="/login" component={Login} />
         <Route path="/view/:recipeId" component={ViewRecipe} />
         <Route component={NoMatch} />
       </Switch>

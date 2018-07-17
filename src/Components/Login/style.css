@@ -1,0 +1,13 @@
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .auth-container .facebook-btn {
+    width: 37px;
+    height: 37px;
+    border: none;
+    background-image: url("../../Images/facebook.png");
+    background-repeat: no-repeat;
+    background-color: #4D6FA9;
+    cursor: pointer; }

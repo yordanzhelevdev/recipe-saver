@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./Header/Header";
 import Recipe from "./Recipe/Recipe";
 import Modal from "./Modal/Modal";
 import CreateRecipeInputs from "./CreateRecipeInputs/CreateRecipeInputs";
@@ -93,15 +94,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <header className="site-header">
-          <h1>
-            <span role="img" aria-label="meat on bone">
-              🍖
-            </span>Recipe Saver<span role="img" aria-label="meat on bone">
-              🍖
-            </span>
-          </h1>
-        </header>
+        <Header />
         <Modal
           isOpen={this.state.isOpen}
           closeTheModal={this.closeTheModal}
@@ -132,9 +125,6 @@ class App extends React.Component {
         </div>
         <button className="btn-addRecipe" onClick={this.toggleModal}>
           Add Recipe
-        </button>
-        <button className="btn-loadSampleData" onClick={this.loadSampleData}>
-          Load Sample Data
         </button>
       </div>
     );
