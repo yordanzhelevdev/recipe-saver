@@ -12,9 +12,11 @@ class Header extends React.Component {
             🍖
           </span>
         </h1>
-        <button className="btn-loadSampleData" onClick={this.loadSampleData}>
-          Load Sample Data
-        </button>
+        <div className="header-buttons">
+          <button className="btn-loadSampleData" onClick={this.loadSampleData}>
+            Load Sample Data
+          </button>
+        </div>
       </header>
     );
   }
