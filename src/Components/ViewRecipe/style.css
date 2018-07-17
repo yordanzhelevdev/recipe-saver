@@ -40,6 +40,9 @@
           list-style: none;
           border-bottom: 1px solid #d7d7d9;
           padding: 12px 0;
-          font-size: 17px; }
+          font-size: 17px;
+          transition: background-color 1s; }
+          .viewRecipe-container .ingrAndDirection-container .ingredients-container ul li:hover, .viewRecipe-container .ingrAndDirection-container .direction-container ul li:hover {
+            background-color: rgba(255, 255, 255, 0.4); }
     .viewRecipe-container .ingrAndDirection-container .ingredients-container {
       margin-right: 5%; }

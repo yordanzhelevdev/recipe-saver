@@ -20,7 +20,6 @@ class EditRecipeInputs extends React.Component {
     };
 
     this.props.updateRecipe(index, updatedRecipe);
-    console.log(updatedRecipe);
   }
 
   editIngredietsAndDirections(e) {
@@ -33,7 +32,6 @@ class EditRecipeInputs extends React.Component {
     };
 
     this.props.updateRecipe(index, updatedRecipe);
-    console.log(updatedRecipe);
   }
 
   render() {
