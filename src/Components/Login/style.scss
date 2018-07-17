@@ -2,7 +2,12 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-  	align-items: center;
+  	align-items: center;  	
+  	background-color: pink;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
   	.facebook-btn {
   		width: 37px;
   		height: 37px;
@@ -11,5 +16,10 @@
   		background-repeat: no-repeat;
   		background-color: #4D6FA9;
   		cursor: pointer;
+  	}
+  	.login-form {
+  		display: flex;
+  		flex-direction: column;
+  		align-items: center;
   	}
 }
