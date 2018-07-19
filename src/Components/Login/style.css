@@ -1,13 +1,16 @@
 .auth-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: pink;
+  background-color: white;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  width: 20%;
+  height: 380px;
+  padding: 30px;
+  box-shadow: 1px 1px 6px 0px #00000070; }
   .auth-container .facebook-btn {
     width: 37px;
     height: 37px;
@@ -20,3 +23,27 @@
     display: flex;
     flex-direction: column;
     align-items: center; }
+    .auth-container .login-form label {
+      font-size: 20px;
+      margin: 5px; }
+    .auth-container .login-form input[type="email"], .auth-container .login-form input[type="password"] {
+      padding: 8px;
+      width: 100%;
+      margin-bottom: 16px; }
+    .auth-container .login-form input[type="submit"] {
+      padding: 10px 30px 10px 15px;
+      background-image: url("../../Images/login-square-arrow-button-outline.png");
+      background-position: 90%;
+      background-repeat: no-repeat;
+      background-size: 15px;
+      background-color: pink;
+      border: none; }
+  .auth-container .or-line {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid black;
+    line-height: 0; }
+    .auth-container .or-line span {
+      background-color: white;
+      padding: 0 10px;
+      text-transform: uppercase; }

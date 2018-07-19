@@ -9,11 +9,15 @@ class Login extends React.Component {
           <h2>Login with:</h2>
           <button className="facebook-btn" />
         </div>
+        <p className="or-line">
+          <span>Or</span>
+        </p>
         <form className="login-form">
-          <label>Email</label>
+          <label>Email Address</label>
           <input type="email" />
           <label>Password</label>
           <input type="password" />
+          <input type="submit" value="Login" />
         </form>
         {/*
        <div className="register-form">
