@@ -13,10 +13,10 @@ class Login extends React.Component {
           <span>Or</span>
         </p>
         <form className="login-form">
-          <label>Email Address</label>
-          <input type="email" />
-          <label>Password</label>
-          <input type="password" />
+          <label for="email">Email Address</label>
+          <input type="email" id="email" />
+          <label for="password">Password</label>
+          <input type="password" id="password" />
           <input type="submit" value="Login" />
         </form>
         {/*
