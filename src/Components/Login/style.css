@@ -36,8 +36,10 @@
       background-position: 90%;
       background-repeat: no-repeat;
       background-size: 15px;
-      background-color: pink;
-      border: none; }
+      background-color: #bd112f;
+      border: none;
+      font-size: 17px;
+      color: white; }
   .auth-container .or-line {
     width: 100%;
     text-align: center;
