@@ -39,7 +39,8 @@
       background-color: #bd112f;
       border: none;
       font-size: 17px;
-      color: white; }
+      color: white;
+      cursor: pointer; }
   .auth-container .or-line {
     width: 100%;
     text-align: center;

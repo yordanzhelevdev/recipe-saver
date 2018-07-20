@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 class Header extends React.Component {
   render() {
+    const authenticated = this.props.authenticated;
     return (
       <header className="site-header">
         <h1>
@@ -15,9 +16,17 @@ class Header extends React.Component {
           </span>
         </h1>
         <div className="header-buttons">
-          <Link to="/login" className="btn-loginOrRegister">
-            Login/Register
-          </Link>
+          {authenticated ? (
+            <Link to="/login" className="btn-loginOrRegister">
+              {" "}
+              Log out{" "}
+            </Link>
+          ) : (
+            <Link to="/login" className="btn-loginOrRegister">
+              {" "}
+              Login/Register
+            </Link>
+          )}
           {this.props.authenticated && (
             <button
               className="btn-loadSampleData"

@@ -5,7 +5,7 @@ import Modal from "./Modal/Modal";
 import CreateRecipeInputs from "./CreateRecipeInputs/CreateRecipeInputs";
 import EditRecipeInputs from "./EditRecipeInputs/EditRecipeInputs";
 import sampleData from "../sample-data";
-import base from "../base";
+import { app, base } from "../base";
 import "./global.css";
 
 class App extends React.Component {
@@ -30,10 +30,25 @@ class App extends React.Component {
 
   componentDidMount() {
     document.addEventListener("keydown", this.onEscapePress);
+    this.removeAuthListener = app.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.setState({
+          authenticated: true
+        });
+      } else {
+        this.setState({
+          authenticated: false
+        });
+      }
+    });
     base.syncState("recipes", {
       context: this,
       state: "recipes"
     });
+  }
+
+  componentWillUnmount() {
+    this.removeAuthListener();
   }
 
   loadSampleData() {
