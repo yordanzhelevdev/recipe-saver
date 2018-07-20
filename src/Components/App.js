@@ -16,7 +16,8 @@ class App extends React.Component {
       isEdit: false,
       isOpen: false,
       editableRecipe: {},
-      authenticated: false
+      authenticated: false,
+      loading: true
     };
     this.addRecipe = this.addRecipe.bind(this);
     this.deleteRecipe = this.deleteRecipe.bind(this);
@@ -33,11 +34,13 @@ class App extends React.Component {
     this.removeAuthListener = app.auth().onAuthStateChanged(user => {
       if (user) {
         this.setState({
-          authenticated: true
+          authenticated: true,
+          loading: false
         });
       } else {
         this.setState({
-          authenticated: false
+          authenticated: false,
+          loading: false
         });
       }
     });
@@ -108,6 +111,9 @@ class App extends React.Component {
   }
 
   render() {
+    if (this.state.loading) {
+      return <div className="loader" />;
+    }
     return (
       <div>
         <Header authenticated={this.state.authenticated} />

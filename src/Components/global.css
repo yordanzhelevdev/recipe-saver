@@ -42,3 +42,33 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
     color: transparent;
     cursor: pointer; }
+
+/* Loader */
+.loader {
+  box-sizing: border-box;
+  width: 120px;
+  height: 120px;
+  border: 16px solid #818285;
+  border-radius: 50%;
+  border-top: 16px solid #A40E4C;
+  /* this is the spinner */
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+  /*Centering*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -60px 0 0 -60px; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
