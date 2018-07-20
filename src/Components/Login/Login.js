@@ -34,13 +34,14 @@ class Login extends React.Component {
   authWithEmailPassword(e) {
     e.preventDefault();
     const email = this.emailInput.value;
-    const passwortd = this.passwordInput.value;
+    const password = this.passwordInput.value;
 
     app
       .auth()
       .fetchProvidersForEmail(email)
       .then(providers => {
         if (providers.length === 0) {
+          return app.auth().createUserWithEmailAndPassword(email, password);
         } else if (providers.indexOf("password") === -1) {
           //they used facebook
           this.loginForm.reset();
@@ -56,11 +57,27 @@ class Login extends React.Component {
             });
           }, 3000);
         } else {
-          //sign user in
+          return app.auth().signInWithEmailAndPassword(email, password);
+        }
+      })
+      .then(user => {
+        if (user && user.email) {
+          this.loginForm.reset();
+          this.setState({ redirect: true });
         }
       })
       .catch(error => {
-        console.log(error.message);
+        this.setState({
+          errorMsg: error.message,
+          snackShow: true
+        });
+
+        setTimeout(() => {
+          this.setState({
+            errorMsg: "",
+            snackShow: false
+          });
+        }, 3000);
       });
   }
 
