@@ -6,6 +6,7 @@ import CreateRecipeInputs from "./CreateRecipeInputs/CreateRecipeInputs";
 import EditRecipeInputs from "./EditRecipeInputs/EditRecipeInputs";
 import sampleData from "../sample-data";
 import { app, base } from "../base";
+import LoadingSpinner from "./LoadingSpinner/LoadingSpinner";
 import "./global.css";
 
 class App extends React.Component {
@@ -112,11 +113,14 @@ class App extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return <div className="loader" />;
+      return <LoadingSpinner heading="Logging in" />;
     }
     return (
       <div>
-        <Header authenticated={this.state.authenticated} />
+        <Header
+          authenticated={this.state.authenticated}
+          loadSampleData={this.loadSampleData}
+        />
         <Modal
           isOpen={this.state.isOpen}
           closeTheModal={this.closeTheModal}

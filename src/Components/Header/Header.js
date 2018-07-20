@@ -17,7 +17,7 @@ class Header extends React.Component {
         </h1>
         <div className="header-buttons">
           {authenticated ? (
-            <Link to="/login" className="btn-loginOrRegister">
+            <Link to="/logout" className="btn-loginOrRegister">
               {" "}
               Log out{" "}
             </Link>
@@ -30,7 +30,7 @@ class Header extends React.Component {
           {this.props.authenticated && (
             <button
               className="btn-loadSampleData"
-              onClick={this.loadSampleData}
+              onClick={this.props.loadSampleData}
             >
               Load Sample Data
             </button>
