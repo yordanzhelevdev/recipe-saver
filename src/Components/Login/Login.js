@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import InfoIcon from "../../Images/info.png";
 
 import { Redirect } from "react-router-dom";
 import { app, facebookProvider } from "../../base";
@@ -94,6 +95,12 @@ class Login extends React.Component {
           </div>
           <p className="or-line">
             <span>Or</span>
+          </p>
+          <p className="reg-note">
+            <img src={InfoIcon} alt="Info icon" />
+            <span>Note</span>
+            If you don't have an account already, this form will create your
+            account.
           </p>
           <form
             className="login-form"

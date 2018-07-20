@@ -8,7 +8,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 20%;
-  height: 380px;
+  min-height: 450px;
   padding: 30px;
   box-shadow: 1px 1px 6px 0px #00000070; }
   .auth-container .facebook-btn {
@@ -19,6 +19,13 @@
     background-repeat: no-repeat;
     background-color: #4D6FA9;
     cursor: pointer; }
+  .auth-container .reg-note {
+    background-color: darkred;
+    color: white;
+    padding: 0 15px 15px 15px; }
+    .auth-container .reg-note span {
+      padding: 15px 0px;
+      text-transform: uppercase; }
   .auth-container .login-form {
     display: flex;
     flex-direction: column;
