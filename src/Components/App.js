@@ -149,9 +149,13 @@ class App extends React.Component {
             );
           })}
         </div>
-        <button className="btn-addRecipe" onClick={this.toggleModal}>
-          Add Recipe
-        </button>
+        {this.state.authenticated ? (
+          <button className="btn-addRecipe" onClick={this.toggleModal}>
+            Add Recipe
+          </button>
+        ) : (
+          ""
+        )}
       </div>
     );
   }
