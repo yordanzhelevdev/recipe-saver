@@ -11,6 +11,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif; }
 
+input[type="text"], textarea {
+  border: 1px solid #CCCCCC !important; }
+
 .site-header {
   text-align: center;
   color: white; }

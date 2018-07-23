@@ -1,6 +1,9 @@
 .auth-container {
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-align: center;
     align-items: center;
     background-color: white;
     position: absolute;
@@ -9,10 +12,12 @@
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    width: 20%;
-    min-height:  450px;
+    width: 75%;
+    min-height: 450px;
     padding: 30px;
+    -webkit-box-shadow: 1px 1px 6px 0px #00000070;
     box-shadow: 1px 1px 6px 0px #00000070;
+    max-width: 430px;
   	.facebook-btn {
   		width: 37px;
   		height: 37px;
@@ -31,7 +36,7 @@
               width: 25px;
               vertical-align: sub;
             }
-            padding: 10px 0px;
+            padding: 8px 0px;
             text-transform: uppercase;
             display: block;
             span { margin-left: 5px;}
