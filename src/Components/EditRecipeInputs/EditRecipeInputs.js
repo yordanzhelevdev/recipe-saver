@@ -41,29 +41,33 @@ class EditRecipeInputs extends React.Component {
         <form name="editRecipeForm">
           <div className="inputsContainer">
             <div className="recipeInputs">
-              <label>Recipe Name</label>
+              <label htmlFor="recipeName">Recipe Name</label>
               <input
+                id="recipeName"
                 value={recipe.recipeName}
                 name="recipeName"
                 type="text"
                 onChange={this.handleEdit}
               />
-              <label>Recipe Photo</label>
+              <label htmlFor="dishImg">Recipe Photo</label>
               <input
+                id="dishImg"
                 onChange={this.handleEdit}
                 value={recipe.dishImg}
                 type="text"
                 name="dishImg"
               />
-              <label>Ingredients</label>
+              <label htmlFor="ingredients">Ingredients</label>
               <textarea
+                id="ingredients"
                 onChange={this.editIngredietsAndDirections}
                 value={recipe.ingredients.join("\n")}
                 name="ingredients"
                 placeholder="Put each ingredient on its own line"
               />
-              <label>Directions</label>
+              <label htmlFor="directions">Directions</label>
               <textarea
+                id="directions"
                 onChange={this.editIngredietsAndDirections}
                 value={recipe.directions.join("\n")}
                 name="directions"
