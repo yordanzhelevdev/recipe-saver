@@ -7,6 +7,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     width: 20%;
     min-height:  450px;
     padding: 30px;
@@ -24,9 +26,15 @@
           background-color: darkred;
           color: white;
           padding: 0 15px 15px 15px;
-          span {
-            padding: 15px 0px;
+          .note {
+            img {
+              width: 25px;
+              vertical-align: sub;
+            }
+            padding: 10px 0px;
             text-transform: uppercase;
+            display: block;
+            span { margin-left: 5px;}
           }
           //   &:before {
           //     content: '';
@@ -48,7 +56,7 @@
   		align-items: center;
 
       label { font-size: 20px; margin: 5px;}
-      input[type="email"], input[type="password"] { padding: 8px; width: 100%; margin-bottom: 16px; }
+      input[type="email"], input[type="password"] { padding: 8px; width: 100%; margin-bottom: 16px; border: 1px solid #CCCCCC !important; }
       input[type="submit"] { 
         padding: 10px 30px 10px 15px; 
         background-image: url('../../Images/login-square-arrow-button-outline.png');

@@ -7,6 +7,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   width: 20%;
   min-height: 450px;
   padding: 30px;
@@ -23,9 +25,15 @@
     background-color: darkred;
     color: white;
     padding: 0 15px 15px 15px; }
-    .auth-container .reg-note span {
-      padding: 15px 0px;
-      text-transform: uppercase; }
+    .auth-container .reg-note .note {
+      padding: 10px 0px;
+      text-transform: uppercase;
+      display: block; }
+      .auth-container .reg-note .note img {
+        width: 25px;
+        vertical-align: sub; }
+      .auth-container .reg-note .note span {
+        margin-left: 5px; }
   .auth-container .login-form {
     display: flex;
     flex-direction: column;
@@ -36,7 +44,8 @@
     .auth-container .login-form input[type="email"], .auth-container .login-form input[type="password"] {
       padding: 8px;
       width: 100%;
-      margin-bottom: 16px; }
+      margin-bottom: 16px;
+      border: 1px solid #CCCCCC !important; }
     .auth-container .login-form input[type="submit"] {
       padding: 10px 30px 10px 15px;
       background-image: url("../../Images/login-square-arrow-button-outline.png");

@@ -97,8 +97,10 @@ class Login extends React.Component {
             <span>Or</span>
           </p>
           <p className="reg-note">
-            <img src={InfoIcon} alt="Info icon" />
-            <span>Note</span>
+            <span className="note">
+              <img src={InfoIcon} alt="Info icon" />
+              <span>Note</span>
+            </span>
             If you don't have an account already, this form will create your
             account.
           </p>
