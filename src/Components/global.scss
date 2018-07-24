@@ -47,6 +47,7 @@ input[type="text"], textarea {
     font-weight: bold;
     outline: none;
  	transition: all .5s;
+    margin-top: 15px;
         &:hover { background-image: url('../Images/add.png'); background-position: center; background-repeat: no-repeat; color: transparent; cursor: pointer; }
  }
 

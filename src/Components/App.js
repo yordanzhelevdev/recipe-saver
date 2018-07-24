@@ -18,7 +18,8 @@ class App extends React.Component {
       isOpen: false,
       editableRecipe: {},
       authenticated: false,
-      loading: true
+      loading: true,
+      currentUser: ""
     };
     this.addRecipe = this.addRecipe.bind(this);
     this.deleteRecipe = this.deleteRecipe.bind(this);
@@ -36,7 +37,8 @@ class App extends React.Component {
       if (user) {
         this.setState({
           authenticated: true,
-          loading: false
+          loading: false,
+          currentUser: user.uid
         });
       } else {
         this.setState({
@@ -56,15 +58,19 @@ class App extends React.Component {
   }
 
   loadSampleData() {
+    const currentUser = this.state.currentUser;
     this.setState({
-      recipes: sampleData
+      recipes: {
+        [currentUser]: sampleData
+      }
     });
   }
 
   addRecipe(recipe) {
     const recipes = { ...this.state.recipes };
     const timeStamp = Date.now();
-    recipes[`recipe-${timeStamp}`] = recipe;
+    recipes[this.state.currentUser] = { [`recipe-${timeStamp}`]: recipe };
+    // recipes[`recipe-${timeStamp}`] = recipe;
     this.setState({ recipes, isOpen: false });
   }
 
@@ -72,7 +78,7 @@ class App extends React.Component {
     // 1. take a copy of state
     const recipes = { ...this.state.recipes };
     // 2. update the state
-    recipes[index] = null;
+    recipes[this.state.currentUser][index] = null;
     // 3.  update state
     this.setState({ recipes });
   }
@@ -87,7 +93,7 @@ class App extends React.Component {
 
   updateRecipe(index, updatedRecipe) {
     const recipes = { ...this.state.recipes };
-    recipes[index] = updatedRecipe;
+    recipes[this.state.currentUser][index] = updatedRecipe;
     this.setState({ recipes });
   }
 
@@ -112,6 +118,7 @@ class App extends React.Component {
   }
 
   render() {
+    const currentUser = this.state.currentUser;
     if (this.state.loading) {
       return <LoadingSpinner heading="Logging in" />;
     }
@@ -128,6 +135,7 @@ class App extends React.Component {
         >
           {this.state.isOpen && this.state.isEdit ? (
             <EditRecipeInputs
+              currentUser={this.state.currentUser}
               recipes={this.state.recipes}
               index={this.state.editableRecipe}
               updateRecipe={this.updateRecipe}
@@ -137,17 +145,19 @@ class App extends React.Component {
           )}
         </Modal>
         <div className="recipeContainer">
-          {Object.keys(this.state.recipes).map(key => {
-            return (
-              <Recipe
-                key={key}
-                index={key}
-                recipe={this.state.recipes[key]}
-                deleteRecipe={this.deleteRecipe}
-                editRecipe={this.editRecipe}
-              />
-            );
-          })}
+          {this.state && this.state.recipes[currentUser]
+            ? Object.keys(this.state.recipes[currentUser]).map(key => {
+                return (
+                  <Recipe
+                    key={key}
+                    index={key}
+                    recipe={this.state.recipes[currentUser][key]}
+                    deleteRecipe={this.deleteRecipe}
+                    editRecipe={this.editRecipe}
+                  />
+                );
+              })
+            : ""}
         </div>
         {this.state.authenticated ? (
           <button className="btn-addRecipe" onClick={this.toggleModal}>

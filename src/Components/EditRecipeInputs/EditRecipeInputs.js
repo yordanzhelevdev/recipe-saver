@@ -35,7 +35,8 @@ class EditRecipeInputs extends React.Component {
   }
 
   render() {
-    const recipe = this.props.recipes[this.props.index];
+    const currentUser = this.props.currentUser;
+    const recipe = this.props.recipes[currentUser][this.props.index];
     return (
       <div>
         <form name="editRecipeForm">

@@ -4,7 +4,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  text-align: center; }
+  text-align: center;
+  transform: translate(-50%, -50%); }
   .loader-wrapper .loader {
     box-sizing: border-box;
     width: 120px;
