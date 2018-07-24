@@ -18,7 +18,8 @@ class App extends React.Component {
       isOpen: false,
       editableRecipe: {},
       authenticated: false,
-      loading: true
+      loading: true,
+      currentUser: ""
     };
     this.addRecipe = this.addRecipe.bind(this);
     this.deleteRecipe = this.deleteRecipe.bind(this);
@@ -37,9 +38,7 @@ class App extends React.Component {
         this.setState({
           authenticated: true,
           loading: false,
-          recipes: {
-            "${user.uid}": {}
-          }
+          currentUser: user.uid
         });
       } else {
         this.setState({
