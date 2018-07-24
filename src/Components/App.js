@@ -36,7 +36,10 @@ class App extends React.Component {
       if (user) {
         this.setState({
           authenticated: true,
-          loading: false
+          loading: false,
+          recipes: {
+            "${user.uid}": {}
+          }
         });
       } else {
         this.setState({
