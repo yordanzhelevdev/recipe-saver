@@ -22,8 +22,25 @@
   }
 }
 
-
 .formBtns {
   text-align: center;
   margin: 10px 20px;
+
+  input[type="submit"], input[type="reset"] {
+    border: 3px double #ffffff;
+    padding: 8px 20px;
+    -webkit-transition: background .5s;
+    -o-transition: background .5s;
+    transition: background .5s;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+  }
+  input[type="submit"] {
+    margin-right: 10px;
+    background-color: #2e6f2a;
+  }
+  input[type="reset"] {
+    background-color: #545454;
+  }
 }

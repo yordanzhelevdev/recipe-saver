@@ -1,10 +1,12 @@
 import React from "react";
+import Header from "./Header/Header";
 import Recipe from "./Recipe/Recipe";
 import Modal from "./Modal/Modal";
 import CreateRecipeInputs from "./CreateRecipeInputs/CreateRecipeInputs";
 import EditRecipeInputs from "./EditRecipeInputs/EditRecipeInputs";
 import sampleData from "../sample-data";
-import base from "../base";
+import { app, base } from "../base";
+import LoadingSpinner from "./LoadingSpinner/LoadingSpinner";
 import "./global.css";
 
 class App extends React.Component {
@@ -14,7 +16,9 @@ class App extends React.Component {
       recipes: {},
       isEdit: false,
       isOpen: false,
-      editableRecipe: {}
+      editableRecipe: {},
+      authenticated: false,
+      loading: true
     };
     this.addRecipe = this.addRecipe.bind(this);
     this.deleteRecipe = this.deleteRecipe.bind(this);
@@ -28,10 +32,27 @@ class App extends React.Component {
 
   componentDidMount() {
     document.addEventListener("keydown", this.onEscapePress);
+    this.removeAuthListener = app.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.setState({
+          authenticated: true,
+          loading: false
+        });
+      } else {
+        this.setState({
+          authenticated: false,
+          loading: false
+        });
+      }
+    });
     base.syncState("recipes", {
       context: this,
       state: "recipes"
     });
+  }
+
+  componentWillUnmount() {
+    this.removeAuthListener();
   }
 
   loadSampleData() {
@@ -91,17 +112,15 @@ class App extends React.Component {
   }
 
   render() {
+    if (this.state.loading) {
+      return <LoadingSpinner heading="Logging in" />;
+    }
     return (
       <div>
-        <header className="site-header">
-          <h1>
-            <span role="img" aria-label="meat on bone">
-              🍖
-            </span>Recipe Saver<span role="img" aria-label="meat on bone">
-              🍖
-            </span>
-          </h1>
-        </header>
+        <Header
+          authenticated={this.state.authenticated}
+          loadSampleData={this.loadSampleData}
+        />
         <Modal
           isOpen={this.state.isOpen}
           closeTheModal={this.closeTheModal}
@@ -130,12 +149,13 @@ class App extends React.Component {
             );
           })}
         </div>
-        <button className="btn-addRecipe" onClick={this.toggleModal}>
-          Add Recipe
-        </button>
-        <button className="btn-loadSampleData" onClick={this.loadSampleData}>
-          Load Sample Data
-        </button>
+        {this.state.authenticated ? (
+          <button className="btn-addRecipe" onClick={this.toggleModal}>
+            Add Recipe
+          </button>
+        ) : (
+          ""
+        )}
       </div>
     );
   }

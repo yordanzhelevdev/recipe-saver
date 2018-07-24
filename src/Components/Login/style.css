@@ -1,0 +1,73 @@
+.auth-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 75%;
+  min-height: 450px;
+  padding: 30px;
+  -webkit-box-shadow: 1px 1px 6px 0px #00000070;
+  box-shadow: 1px 1px 6px 0px #00000070;
+  max-width: 430px; }
+  .auth-container .facebook-btn {
+    width: 37px;
+    height: 37px;
+    border: none;
+    background-image: url("../../Images/facebook.png");
+    background-repeat: no-repeat;
+    background-color: #4D6FA9;
+    cursor: pointer; }
+  .auth-container .reg-note {
+    background-color: darkred;
+    color: white;
+    padding: 0 15px 15px 15px; }
+    .auth-container .reg-note .note {
+      padding: 8px 0px;
+      text-transform: uppercase;
+      display: block; }
+      .auth-container .reg-note .note img {
+        width: 25px;
+        vertical-align: sub; }
+      .auth-container .reg-note .note span {
+        margin-left: 5px; }
+  .auth-container .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .auth-container .login-form label {
+      font-size: 20px;
+      margin: 5px; }
+    .auth-container .login-form input[type="email"], .auth-container .login-form input[type="password"] {
+      padding: 8px;
+      width: 100%;
+      margin-bottom: 16px;
+      border: 1px solid #CCCCCC !important; }
+    .auth-container .login-form input[type="submit"] {
+      padding: 10px 30px 10px 15px;
+      background-image: url("../../Images/login-square-arrow-button-outline.png");
+      background-position: 90%;
+      background-repeat: no-repeat;
+      background-size: 15px;
+      background-color: #bd112f;
+      border: none;
+      font-size: 17px;
+      color: white;
+      cursor: pointer; }
+  .auth-container .or-line {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid black;
+    line-height: 0; }
+    .auth-container .or-line span {
+      background-color: white;
+      padding: 0 10px;
+      text-transform: uppercase; }

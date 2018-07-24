@@ -34,26 +34,30 @@ class CreateRecipeInputs extends React.Component {
         >
           <div className="inputsContainer">
             <div className="recipeInputs">
-              <label>Recipe Name</label>
+              <label htmlFor="recipeName">Recipe Name</label>
               <input
                 name="recipeName"
                 type="text"
+                id="recipeName"
                 ref={input => (this.recipeName = input)}
               />
-              <label>Recipe Photo</label>
+              <label htmlFor="dishImg">Recipe Photo</label>
               <input
                 type="text"
                 name="dishImg"
+                id="dishImg"
                 ref={input => (this.dishImg = input)}
               />
-              <label>Ingredients</label>
+              <label htmlFor="ingredients">Ingredients</label>
               <textarea
                 name="ingredients"
+                id="ingredients"
                 placeholder="Put each ingredient on its own line"
                 ref={input => (this.ingredients = input)}
               />
-              <label>Directions</label>
+              <label htmlFor="directions">Directions</label>
               <textarea
+                id="directions"
                 name="directions"
                 placeholder="Put each step on its own line"
                 ref={input => (this.directions = input)}

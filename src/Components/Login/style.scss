@@ -1,0 +1,90 @@
+.auth-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 75%;
+    min-height: 450px;
+    padding: 30px;
+    -webkit-box-shadow: 1px 1px 6px 0px #00000070;
+    box-shadow: 1px 1px 6px 0px #00000070;
+    max-width: 430px;
+  	.facebook-btn {
+  		width: 37px;
+  		height: 37px;
+  		border: none;
+  		background-image: url("../../Images/facebook.png");
+  		background-repeat: no-repeat;
+  		background-color: #4D6FA9;
+  		cursor: pointer;
+  	}
+    .reg-note  {
+          background-color: darkred;
+          color: white;
+          padding: 0 15px 15px 15px;
+          .note {
+            img {
+              width: 25px;
+              vertical-align: sub;
+            }
+            padding: 8px 0px;
+            text-transform: uppercase;
+            display: block;
+            span { margin-left: 5px;}
+          }
+          //   &:before {
+          //     content: '';
+          //     background-image: url('../../Images/info.png');
+          //     background-position: left;
+          //     background-size: 30px;
+          //     background-repeat: no-repeat;
+          //     width: 30px;
+          //     height: 30px;
+          //     position: absolute;
+          //   }
+          // }
+
+    }
+
+  	.login-form {
+  		display: flex;
+  		flex-direction: column;
+  		align-items: center;
+
+      label { font-size: 20px; margin: 5px;}
+      input[type="email"], input[type="password"] { padding: 8px; width: 100%; margin-bottom: 16px; border: 1px solid #CCCCCC !important; }
+      input[type="submit"] { 
+        padding: 10px 30px 10px 15px; 
+        background-image: url('../../Images/login-square-arrow-button-outline.png');
+        background-position: 90%;
+        background-repeat: no-repeat;
+        background-size: 15px;
+        background-color: #bd112f;
+        border: none;
+        font-size: 17px;
+        color: white;
+        cursor: pointer;
+      }
+  	}
+
+    .or-line {
+      width: 100%;
+      text-align: center;
+      border-bottom: 2px solid black;
+      line-height: 0;
+      span {
+        background-color: white;
+        padding: 0 10px;
+        text-transform: uppercase;
+      }
+    }
+}
