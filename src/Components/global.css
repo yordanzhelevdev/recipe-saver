@@ -38,7 +38,8 @@ input[type="text"], textarea {
   font-size: 12px;
   font-weight: bold;
   outline: none;
-  transition: all .5s; }
+  transition: all .5s;
+  margin-top: 15px; }
   .btn-addRecipe:hover {
     background-image: url("../Images/add.png");
     background-position: center;
