@@ -11,7 +11,7 @@
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 
     .modal-content {
-      background-color: #FBD1A2;
+      background-color: #5D9F48;
       margin: auto;
       padding: 0;
       width: 30%;
@@ -20,11 +20,12 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      color: white;
 
       .modal-header {
           padding: 2px 16px;
-          background-color: #e88554;
-          h2 { color: azure; font-weight: normal; font-size: 25px; }
+          background-color: #376E4B;
+          h2 { color: white; font-weight: normal; font-size: 25px; }
         .close {
           display: inline-block;
           background: url('../../Images/letter-x.png') no-repeat center;
@@ -38,7 +39,7 @@
       }
     }
     .modal-body {
-      background-color: #FBD1A2;
+      background-color: #5D9F48;
     }
     .modal-footer {}
 }
