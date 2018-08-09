@@ -17,12 +17,12 @@ class Header extends React.Component {
         </h1>
         <div className="header-buttons">
           {authenticated ? (
-            <Link to="/logout" className="btn-loginOrRegister">
+            <Link to="/logout" className="btn-logOut">
               {" "}
-              Log out{" "}
+              Log Out
             </Link>
           ) : (
-            <Link to="/login" className="btn-loginOrRegister">
+            <Link to="/login" className="btn-logIn">
               {" "}
               Login/Register
             </Link>

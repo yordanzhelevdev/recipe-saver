@@ -15,7 +15,8 @@
     position: absolute;
     right: 0px; }
     .site-header .header-buttons .btn-loadSampleData,
-    .site-header .header-buttons .btn-loginOrRegister {
+    .site-header .header-buttons .btn-logOut,
+    .site-header .header-buttons .btn-logIn {
       margin-right: 10px;
       padding: 5px;
       border: 3px double #ffffff;

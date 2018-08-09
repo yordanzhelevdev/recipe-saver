@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 import Recipe from "./Recipe/Recipe";
 import Modal from "./Modal/Modal";
 import CreateRecipeInputs from "./CreateRecipeInputs/CreateRecipeInputs";
@@ -166,7 +167,9 @@ class App extends React.Component {
         ) : (
           ""
         )}
+        <Footer />
       </div>
+
     );
   }
 }
