@@ -2,13 +2,13 @@
   background: #376e4b;
   display: flex;
   flex-direction: column;
-  width: 401px;
+  width: 300px;
   margin: 10px; }
   .recipeReview a {
     text-decoration: none; }
     .recipeReview a .recipeBody .recipeImage {
       width: 100%;
-      max-width: 401px; }
+      max-width: 300px; }
     .recipeReview a .recipeBody p {
       margin-left: 10px;
       font-size: 18px;
@@ -21,9 +21,10 @@
       .recipeReview .recipeFooter .recipeButtons .btn-dlt,
       .recipeReview .recipeFooter .recipeButtons .btn-edit {
         margin-bottom: 10px;
-        border: 3px double #ffffff;
         padding: 8px 20px;
-        transition: background 0.5s; }
+        transition: background 0.5s;
+        border: 0;
+        box-shadow: 0px 1px 4px #00000033; }
         .recipeReview .recipeFooter .recipeButtons .btn-dlt:hover,
         .recipeReview .recipeFooter .recipeButtons .btn-edit:hover {
           background-repeat: no-repeat;
@@ -32,14 +33,14 @@
           cursor: pointer; }
       .recipeReview .recipeFooter .recipeButtons .btn-dlt {
         float: right;
-        background-color: #cc1818;
+        background-color: #900000;
         color: white;
         font-size: 19px; }
         .recipeReview .recipeFooter .recipeButtons .btn-dlt:hover {
           background-image: url("../../Images/rubbish-bin.png"); }
       .recipeReview .recipeFooter .recipeButtons .btn-edit {
         float: left;
-        background-color: #2e6f2a;
+        background-color: #2b944c;
         color: white;
         font-size: 19px; }
         .recipeReview .recipeFooter .recipeButtons .btn-edit:hover {
