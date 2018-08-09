@@ -20,13 +20,8 @@
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "precommit": "pretty-quick --staged"
   },
   "devDependencies": {
-    "husky": "^0.14.3",
-    "pre-commit": "^1.2.2",
-    "prettier": "^1.13.7",
-    "pretty-quick": "^1.6.0",
     "re-base": "^3.2.3"
   }
 }
