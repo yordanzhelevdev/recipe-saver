@@ -1,53 +1,65 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins|Roboto');
+@import url("https://fonts.googleapis.com/css?family=Poppins|Roboto");
 
 * {
-	font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-html,body{
-	margin: 0;
+html,
+body {
+  margin: 0;
 }
 
 body {
-	background: #5D9F48;
+  background: #5d9f48;
 }
 
-h1,h2,h3,h4,h5,h6 {
-		font-family: 'Poppins', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
 }
 
-input[type="text"], textarea { 
-    border: 1px solid #CCCCCC !important;
+input[type="text"],
+textarea {
+  border: 1px solid #cccccc !important;
 }
 
 .site-header {
-	text-align: center;
-	color: white;
+  text-align: center;
+  color: white;
 }
 
-.recipeContainer{
-    box-sizing: border-box;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 90%;
- }
+.recipeContainer {
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+}
 
- .btn-addRecipe {
-	display: block;
-    margin: 0 auto 10px;
-    padding: 15px;
-    color: white;
-    background-color: #06a56c;
-    border: 3px double #ffffff;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: bold;
-    outline: none;
- 	transition: all .5s;
-    margin-top: 15px;
-        &:hover { background-image: url('../Images/add.png'); background-position: center; background-repeat: no-repeat; color: transparent; cursor: pointer; }
- }
-
+.btn-addRecipe {
+  display: block;
+  margin: 0 auto 10px;
+  padding: 15px;
+  color: white;
+  background-color: #376e4b;
+  border: 3px double #ffffff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  outline: none;
+  transition: all 0.5s;
+  margin-top: 15px;
+  &:hover {
+    background-image: url("../Images/add.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    color: transparent;
+    cursor: pointer;
+  }
+}

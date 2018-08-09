@@ -17,7 +17,7 @@
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */ }
   .modal .modal-content {
-    background-color: #5D9F48;
+    background-color: #5d9f48;
     margin: auto;
     padding: 0;
     width: 30%;
@@ -29,7 +29,7 @@
     color: white; }
     .modal .modal-content .modal-header {
       padding: 2px 16px;
-      background-color: #376E4B; }
+      background-color: #376e4b; }
       .modal .modal-content .modal-header h2 {
         color: white;
         font-weight: normal;
@@ -45,7 +45,7 @@
         .modal .modal-content .modal-header .close:hover, .modal .modal-content .modal-header .close:focus {
           cursor: pointer; }
   .modal .modal-body {
-    background-color: #5D9F48; }
+    background-color: #5d9f48; }
 
 .closed {
   display: none; }

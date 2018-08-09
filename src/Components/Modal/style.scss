@@ -1,53 +1,61 @@
 .modal {
-    display: none;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 
-    .modal-content {
-      background-color: #5D9F48;
-      margin: auto;
-      padding: 0;
-      width: 30%;
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
+  .modal-content {
+    background-color: #5d9f48;
+    margin: auto;
+    padding: 0;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
 
-      .modal-header {
-          padding: 2px 16px;
-          background-color: #376E4B;
-          h2 { color: white; font-weight: normal; font-size: 25px; }
-        .close {
-          display: inline-block;
-          background: url('../../Images/letter-x.png') no-repeat center;
-          width: 20px;
-          height: 20px;
-          position: absolute;
-          right: 5px;
-          top: 5px;
-          &:hover, &:focus { cursor: pointer; }
+    .modal-header {
+      padding: 2px 16px;
+      background-color: #376e4b;
+      h2 {
+        color: white;
+        font-weight: normal;
+        font-size: 25px;
+      }
+      .close {
+        display: inline-block;
+        background: url("../../Images/letter-x.png") no-repeat center;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        &:hover,
+        &:focus {
+          cursor: pointer;
         }
       }
     }
-    .modal-body {
-      background-color: #5D9F48;
-    }
-    .modal-footer {}
+  }
+  .modal-body {
+    background-color: #5d9f48;
+  }
+  .modal-footer {
+  }
 }
 
-.closed{
-	display: none;
+.closed {
+  display: none;
 }
 
 .opened {
-	display: block;
+  display: block;
 }

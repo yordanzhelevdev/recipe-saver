@@ -1,5 +1,5 @@
 .recipeReview {
-  background: #376E4B;
+  background: #376e4b;
   display: flex;
   flex-direction: column;
   width: 401px;
@@ -18,12 +18,14 @@
     margin-top: auto; }
     .recipeReview .recipeFooter .recipeButtons {
       margin: 10px; }
-      .recipeReview .recipeFooter .recipeButtons .btn-dlt, .recipeReview .recipeFooter .recipeButtons .btn-edit {
+      .recipeReview .recipeFooter .recipeButtons .btn-dlt,
+      .recipeReview .recipeFooter .recipeButtons .btn-edit {
         margin-bottom: 10px;
         border: 3px double #ffffff;
         padding: 8px 20px;
-        transition: background .5s; }
-        .recipeReview .recipeFooter .recipeButtons .btn-dlt:hover, .recipeReview .recipeFooter .recipeButtons .btn-edit:hover {
+        transition: background 0.5s; }
+        .recipeReview .recipeFooter .recipeButtons .btn-dlt:hover,
+        .recipeReview .recipeFooter .recipeButtons .btn-edit:hover {
           background-repeat: no-repeat;
           background-position: center;
           color: transparent;
