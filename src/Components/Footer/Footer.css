@@ -1,7 +1,12 @@
 .footer {
   background-color: #376e4b;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white; }
+  height: 87px; }
+  .footer .footer-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px 0; }
+    .footer .footer-content-wrapper span {
+      margin-bottom: 10px; }
