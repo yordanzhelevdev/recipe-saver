@@ -4,7 +4,7 @@ import githubImg from '../../Images/github.png';
 
 class Footer extends React.Component {
 	render() {
-		return(
+		return (
 			<footer class="footer">
 				<div className="footer-content-wrapper">
 					<span>Created with <span className="love" role="img" aria-label="heart emoticon" alt="heart emoticon">&#x1F496;</span>by <span>Yordan Zhelev</span></span>
@@ -14,6 +14,5 @@ class Footer extends React.Component {
 		)
 	}
 }
-
 
 export default Footer;

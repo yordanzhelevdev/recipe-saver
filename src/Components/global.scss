@@ -28,9 +28,12 @@ textarea {
 }
 
 .wrapper-all {
-  min-height: 100%;
-  margin-bottom: -87px;
-  .push { height: 87px; }
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .inner-all {
+    flex: 1 0 auto;
+  }
 }
 
 .site-header {

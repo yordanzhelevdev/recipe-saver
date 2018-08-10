@@ -124,8 +124,8 @@ class App extends React.Component {
       return <LoadingSpinner heading="Logging in" />;
     }
     return (
-        <div>
-          <div className="wrapper-all">
+        <div className="wrapper-all">
+          <div class="inner-all">
             <Header
               authenticated={this.state.authenticated}
               loadSampleData={this.loadSampleData}
@@ -168,7 +168,6 @@ class App extends React.Component {
             ) : (
               ""
             )}
-            <div class="push"></div>
           </div>
         <Footer />
       </div>

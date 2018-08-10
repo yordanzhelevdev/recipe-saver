@@ -1,6 +1,7 @@
 .footer {
   background-color: #376e4b;
-  height: 87px; }
+  height: 87px;
+  flex-shrink: 0; }
   .footer .footer-content-wrapper {
     display: flex;
     flex-direction: column;
