@@ -36,7 +36,7 @@
 .viewRecipe-wrapper .viewRecipe-container .viewRecipe-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .viewRecipe-wrapper
   .viewRecipe-container
@@ -45,6 +45,8 @@
   display: flex;
   flex-direction: column;
   order: 2;
+  margin-left: auto;
+  flex: 1;
 }
 .viewRecipe-wrapper
   .viewRecipe-container
@@ -92,6 +94,9 @@
 }
 .viewRecipe-wrapper .viewRecipe-container .viewRecipe-header h2 {
   order: 1;
+  flex: 1;
+  font-size: 5.7vw;
+  align-self: center;
 }
 .viewRecipe-wrapper .viewRecipe-container .ingrAndDirection-container {
   display: flex;

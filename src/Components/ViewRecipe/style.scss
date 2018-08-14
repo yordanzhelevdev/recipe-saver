@@ -36,11 +36,13 @@
     .viewRecipe-header {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      flex-wrap: wrap;
       .viewRecipe-recipeName {
         display: flex;
         flex-direction: column;
         order: 2;
+        margin-left: auto;
+        flex: 1;
         .viewRecipe-title {
           .title {
             font-size: 35px;
@@ -72,6 +74,9 @@
 
       h2 {
         order: 1;
+        flex: 1;
+        font-size: 5.7vw;
+        align-self: center;
       }
     }
 

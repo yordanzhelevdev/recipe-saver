@@ -24,7 +24,7 @@ class Footer extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={githubImg} />
+            <img src={githubImg} alt="github icon" />
           </a>
         </div>
       </footer>
