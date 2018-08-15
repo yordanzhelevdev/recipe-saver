@@ -4,6 +4,18 @@ import "./style.css";
 import { Link } from "react-router-dom";
 
 class Header extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      isMobileMenuOpen: false
+    };
+    this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
+  }
+
+  toggleMobileMenu() {
+    console.log("test");
+  }
+
   render() {
     const authenticated = this.props.authenticated;
     return (
@@ -17,7 +29,7 @@ class Header extends React.Component {
             🍖
           </span>
         </h1>
-        <button className="mobile-menu-btn">
+        <button className="mobile-menu-btn" onClick={this.toggleMobileMenu}>
           <span className="bar1" />
           <span className="bar2" />
           <span className="bar3" />

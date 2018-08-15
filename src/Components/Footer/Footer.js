@@ -5,7 +5,7 @@ import githubImg from "../../Images/github.png";
 class Footer extends React.Component {
   render() {
     return (
-      <footer class="footer">
+      <footer className="footer">
         <div className="footer-content-wrapper">
           <span>
             Created with{" "}
