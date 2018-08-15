@@ -6,7 +6,7 @@
   transition: background 0.5s;
   font-size: 15px;
   color: white;
-  background-color: inherit;
+  background-color: #376e4b;
   &:hover {
     background-repeat: no-repeat;
     background-position: center;
@@ -17,10 +17,6 @@
 }
 
 .viewRecipe-wrapper {
-  height: 100vh;
-  background-image: url("../../Images/recipe-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   .viewRecipe-container {
     width: 60%;
     margin: 0 auto;
@@ -87,14 +83,15 @@
         width: 50%;
         ul {
           padding-left: 0;
+          background-color: #ffffffd9;
           li {
             list-style: none;
-            border-bottom: 1px solid #d7d7d9;
+            border-bottom: 2px dashed #376e4b;
             padding: 12px 0;
             font-size: 17px;
-            transition: background-color 1s;
+            transition: background-color 0.3s;
             &:hover {
-              background-color: rgba(255, 255, 255, 0.4);
+              background-color: rgba(255, 255, 255, 1);
             }
           }
         }

@@ -6,7 +6,7 @@
   transition: background 0.5s;
   font-size: 15px;
   color: white;
-  background-color: inherit;
+  background-color: #376e4b;
 }
 .btn-goBack:hover {
   background-repeat: no-repeat;
@@ -16,12 +16,6 @@
   background-image: url("../../Images/go-back.png");
 }
 
-.viewRecipe-wrapper {
-  height: 100vh;
-  background-image: url("../../Images/recipe-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .viewRecipe-wrapper .viewRecipe-container {
   width: 60%;
   margin: 0 auto;
@@ -122,6 +116,7 @@
   .direction-container
   ul {
   padding-left: 0;
+  background-color: #ffffffd9;
 }
 .viewRecipe-wrapper
   .viewRecipe-container
@@ -136,10 +131,10 @@
   ul
   li {
   list-style: none;
-  border-bottom: 1px solid #d7d7d9;
+  border-bottom: 2px dashed #376e4b;
   padding: 12px 0;
   font-size: 17px;
-  transition: background-color 1s;
+  transition: background-color 0.3s;
 }
 .viewRecipe-wrapper
   .viewRecipe-container
@@ -153,7 +148,7 @@
   .direction-container
   ul
   li:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: white;
 }
 .viewRecipe-wrapper
   .viewRecipe-container
