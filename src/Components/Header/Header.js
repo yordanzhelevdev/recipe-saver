@@ -11,31 +11,37 @@ class Header extends React.Component {
         <h1>
           <span role="img" aria-label="meat on bone">
             🍖
-          </span>Recipe Saver<span role="img" aria-label="meat on bone">
+          </span>
+          Recipe Saver
+          <span role="img" aria-label="meat on bone">
             🍖
           </span>
         </h1>
-        <div className="header-buttons">
-          {authenticated ? (
-            <Link to="/logout" className="btn-logOut">
-              {" "}
-              Log Out
-            </Link>
-          ) : (
-            <Link to="/login" className="btn-logIn">
-              {" "}
-              Login/Register
-            </Link>
-          )}
-          {this.props.authenticated && (
-            <button
-              className="btn-loadSampleData"
-              onClick={this.props.loadSampleData}
-            >
-              Load Sample Data
-            </button>
-          )}
-        </div>
+        <ul className="header-buttons">
+          <li>
+            {authenticated ? (
+              <Link to="/logout" className="btn-logOut">
+                {" "}
+                Log Out
+              </Link>
+            ) : (
+              <Link to="/login" className="btn-logIn">
+                {" "}
+                Login/Register
+              </Link>
+            )}
+          </li>
+          <li>
+            {this.props.authenticated && (
+              <button
+                className="btn-loadSampleData"
+                onClick={this.props.loadSampleData}
+              >
+                Load Sample Data
+              </button>
+            )}
+          </li>
+        </ul>
       </header>
     );
   }

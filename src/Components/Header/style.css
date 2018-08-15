@@ -7,21 +7,31 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center; }
-  .site-header h1 {
-    margin: 0;
-    font-size: 25px; }
-  .site-header .header-buttons {
-    position: absolute;
-    right: 0px; }
-    .site-header .header-buttons .btn-loadSampleData,
-    .site-header .header-buttons .btn-logOut,
-    .site-header .header-buttons .btn-logIn {
-      margin-right: 10px;
-      padding: 5px;
-      border: 3px double #ffffff;
-      background-color: initial;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      text-decoration: none; }
+  align-items: center;
+}
+.site-header h1 {
+  margin: 0;
+  font-size: 25px;
+}
+.site-header .header-buttons {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  margin: 0;
+}
+.site-header .header-buttons .btn-loadSampleData,
+.site-header .header-buttons .btn-logOut,
+.site-header .header-buttons .btn-logIn {
+  margin-right: 10px;
+  padding: 5px;
+  border: 3px double #ffffff;
+  background-color: initial;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}

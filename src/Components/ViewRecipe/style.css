@@ -115,8 +115,8 @@
   .ingrAndDirection-container
   .direction-container
   ul {
-  padding-left: 0;
   background-color: #ffffffd9;
+  padding: 50px 40px;
 }
 .viewRecipe-wrapper
   .viewRecipe-container
