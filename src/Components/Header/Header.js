@@ -13,7 +13,9 @@ class Header extends React.Component {
   }
 
   toggleMobileMenu() {
-    console.log("test");
+    this.setState(prevState => ({
+      isMobileMenuOpen: !prevState.isMobileMenuOpen
+    }));
   }
 
   render() {
@@ -29,7 +31,12 @@ class Header extends React.Component {
             🍖
           </span>
         </h1>
-        <button className="mobile-menu-btn" onClick={this.toggleMobileMenu}>
+        <button
+          className={`mobile-menu-btn ${
+            this.state.isMobileMenuOpen ? "change" : ""
+          }`}
+          onClick={this.toggleMobileMenu}
+        >
           <span className="bar1" />
           <span className="bar2" />
           <span className="bar3" />
