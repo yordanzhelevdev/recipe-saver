@@ -17,6 +17,11 @@ class Header extends React.Component {
             🍖
           </span>
         </h1>
+        <button className="mobile-menu-btn">
+          <span className="bar1" />
+          <span className="bar2" />
+          <span className="bar3" />
+        </button>
         <ul className="header-buttons">
           <li>
             {authenticated ? (

@@ -13,6 +13,38 @@
     font-size: 25px;
     // line-height: 50px;
   }
+  .mobile-menu-btn {
+    cursor: pointer;
+    display: none;
+    background-color: inherit;
+    border: none;
+    @media screen and (max-width: 768px) {
+      display: block;
+      position: absolute;
+      right: 0;
+    }
+    .bar1,
+    .bar2,
+    .bar3 {
+      display: block;
+      width: 35px;
+      height: 5px;
+      background-color: white;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    .change .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    .change .bar2 {
+      opacity: 0;
+    }
+    .change .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-8px, -8px);
+    }
+  }
 
   .header-buttons {
     list-style-type: none;
@@ -23,6 +55,9 @@
     position: absolute;
     right: 0px;
     margin: 0;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
     .btn-loadSampleData,
     .btn-logOut,
     .btn-logIn {

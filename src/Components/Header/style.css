@@ -13,6 +13,40 @@
   margin: 0;
   font-size: 25px;
 }
+.site-header .mobile-menu-btn {
+  cursor: pointer;
+  display: none;
+  background-color: inherit;
+  border: none;
+}
+@media screen and (max-width: 768px) {
+  .site-header .mobile-menu-btn {
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+}
+.site-header .mobile-menu-btn .bar1,
+.site-header .mobile-menu-btn .bar2,
+.site-header .mobile-menu-btn .bar3 {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.site-header .mobile-menu-btn .change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+.site-header .mobile-menu-btn .change .bar2 {
+  opacity: 0;
+}
+.site-header .mobile-menu-btn .change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
 .site-header .header-buttons {
   list-style-type: none;
   display: flex;
@@ -22,6 +56,11 @@
   position: absolute;
   right: 0px;
   margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .site-header .header-buttons {
+    display: none;
+  }
 }
 .site-header .header-buttons .btn-loadSampleData,
 .site-header .header-buttons .btn-logOut,
