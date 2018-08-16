@@ -41,31 +41,33 @@ class Header extends React.Component {
           <span className="bar2" />
           <span className="bar3" />
         </button>
-        <ul className="header-buttons">
-          <li>
-            {authenticated ? (
-              <Link to="/logout" className="btn-logOut">
-                {" "}
-                Log Out
-              </Link>
-            ) : (
-              <Link to="/login" className="btn-logIn">
-                {" "}
-                Login/Register
-              </Link>
-            )}
-          </li>
-          <li>
-            {this.props.authenticated && (
-              <button
-                className="btn-loadSampleData"
-                onClick={this.props.loadSampleData}
-              >
-                Load Sample Data
-              </button>
-            )}
-          </li>
-        </ul>
+        <nav>
+          <ul className="header-buttons">
+            <li>
+              {authenticated ? (
+                <Link to="/logout" className="btn-logOut">
+                  {" "}
+                  Log Out
+                </Link>
+              ) : (
+                <Link to="/login" className="btn-logIn">
+                  {" "}
+                  Login/Register
+                </Link>
+              )}
+            </li>
+            <li>
+              {this.props.authenticated && (
+                <button
+                  className="btn-loadSampleData"
+                  onClick={this.props.loadSampleData}
+                >
+                  Load Sample Data
+                </button>
+              )}
+            </li>
+          </ul>
+        </nav>
       </header>
     );
   }

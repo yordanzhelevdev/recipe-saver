@@ -1,28 +1,96 @@
+// .site-header {
+//   text-align: center;
+//   color: white;
+//   width: 100%;
+//   height: 50px;
+//   background-color: #376e4b;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: center;
+//   h1 {
+//     margin: 0;
+//     font-size: 25px;
+//     // line-height: 50px;
+//   }
+//   .mobile-menu-btn {
+//     cursor: pointer;
+//     display: none;
+//     background-color: inherit;
+//     border: none;
+//     @media screen and (max-width: 768px) {
+//       display: block;
+//       position: absolute;
+//       right: 0;
+//     }
+//     .bar1,
+//     .bar2,
+//     .bar3 {
+//       display: block;
+//       width: 35px;
+//       height: 5px;
+//       background-color: white;
+//       margin: 6px 0;
+//       transition: 0.4s;
+//     }
+//     &.change .bar1 {
+//       -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+//       transform: rotate(-45deg) translate(-9px, 6px);
+//     }
+//     &.change .bar2 {
+//       opacity: 0;
+//     }
+//     &.change .bar3 {
+//       -webkit-transform: rotate(45deg) translate(-8px, -8px);
+//       transform: rotate(45deg) translate(-8px, -8px);
+//     }
+//   }
+
+//   .header-buttons {
+//     list-style-type: none;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+//     position: absolute;
+//     right: 0px;
+//     margin: 0;
+//     @media screen and (max-width: 768px) {
+//       display: none;
+//     }
+//     .btn-loadSampleData,
+//     .btn-logOut,
+//     .btn-logIn {
+//       margin-right: 10px;
+//       padding: 5px;
+//       border: 3px double #ffffff;
+//       background-color: initial;
+//       color: white;
+//       font-size: 16px;
+//       cursor: pointer;
+//       text-decoration: none;
+//     }
+//   }
+// }
+
 .site-header {
-  text-align: center;
-  color: white;
-  width: 100%;
-  height: 50px;
   background-color: #376e4b;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  h1 {
-    margin: 0;
-    font-size: 25px;
-    // line-height: 50px;
+  // padding: 16px;
+  font-family: sans-serif;
+  color: white;
+  height: 50px;
+  &:before {
+    content: "";
+    flex: 1;
   }
   .mobile-menu-btn {
-    cursor: pointer;
     display: none;
+    cursor: pointer;
     background-color: inherit;
     border: none;
-    @media screen and (max-width: 768px) {
-      display: block;
-      position: absolute;
-      right: 0;
-    }
     .bar1,
     .bar2,
     .bar3 {
@@ -44,31 +112,59 @@
       -webkit-transform: rotate(45deg) translate(-8px, -8px);
       transform: rotate(45deg) translate(-8px, -8px);
     }
+    @media only screen and (max-width: 768px) {
+      display: inline-block;
+    }
   }
-
-  .header-buttons {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 0px;
+  nav {
+    flex: 1;
+    .header-buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      .btn-loadSampleData,
+      .btn-logOut,
+      .btn-logIn {
+        margin-right: 10px;
+        padding: 5px;
+        border: 3px double #ffffff;
+        background-color: initial;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+  h1 {
     margin: 0;
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
-    .btn-loadSampleData,
-    .btn-logOut,
-    .btn-logIn {
-      margin-right: 10px;
-      padding: 5px;
-      border: 3px double #ffffff;
-      background-color: initial;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      text-decoration: none;
-    }
+    font-size: 25px;
+    line-height: 50px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Navbar__Items,
+  .Navbar {
+    flex-direction: column;
+  }
+  .Navbar__Items {
+    display: none;
+  }
+  .Navbar__Items--right {
+    margin-right: 0;
+  }
+  .Navbar__ToggleShow {
+    display: flex;
+  }
+  .Navbar__Link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
   }
 }

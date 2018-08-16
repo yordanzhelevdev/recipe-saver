@@ -1,30 +1,21 @@
 .site-header {
-  text-align: center;
-  color: white;
-  width: 100%;
-  height: 50px;
   background-color: #376e4b;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  font-family: sans-serif;
+  color: white;
+  height: 50px;
 }
-.site-header h1 {
-  margin: 0;
-  font-size: 25px;
+.site-header:before {
+  content: "";
+  flex: 1;
 }
 .site-header .mobile-menu-btn {
-  cursor: pointer;
   display: none;
+  cursor: pointer;
   background-color: inherit;
   border: none;
-}
-@media screen and (max-width: 768px) {
-  .site-header .mobile-menu-btn {
-    display: block;
-    position: absolute;
-    right: 0;
-  }
 }
 .site-header .mobile-menu-btn .bar1,
 .site-header .mobile-menu-btn .bar2,
@@ -47,24 +38,26 @@
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
 }
-.site-header .header-buttons {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 0px;
-  margin: 0;
-}
-@media screen and (max-width: 768px) {
-  .site-header .header-buttons {
-    display: none;
+@media only screen and (max-width: 768px) {
+  .site-header .mobile-menu-btn {
+    display: inline-block;
   }
 }
-.site-header .header-buttons .btn-loadSampleData,
-.site-header .header-buttons .btn-logOut,
-.site-header .header-buttons .btn-logIn {
+.site-header nav {
+  flex: 1;
+}
+.site-header nav .header-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.site-header nav .header-buttons .btn-loadSampleData,
+.site-header nav .header-buttons .btn-logOut,
+.site-header nav .header-buttons .btn-logIn {
   margin-right: 10px;
   padding: 5px;
   border: 3px double #ffffff;
@@ -73,4 +66,31 @@
   font-size: 16px;
   cursor: pointer;
   text-decoration: none;
+}
+.site-header h1 {
+  margin: 0;
+  font-size: 25px;
+  line-height: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Navbar__Items,
+  .Navbar {
+    flex-direction: column;
+  }
+  .Navbar__Items {
+    display: none;
+  }
+  .Navbar__Items--right {
+    margin-right: 0;
+  }
+  .Navbar__ToggleShow {
+    display: flex;
+  }
+  .Navbar__Link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+  }
 }
