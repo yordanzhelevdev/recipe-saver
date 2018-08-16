@@ -41,7 +41,9 @@ class Header extends React.Component {
           <span className="bar2" />
           <span className="bar3" />
         </button>
-        <nav>
+        <nav
+          className={`${this.state.isMobileMenuOpen ? "open-mobile-menu" : ""}`}
+        >
           <ul className="header-buttons">
             <li>
               {authenticated ? (

@@ -5,7 +5,11 @@
   align-items: center;
   font-family: sans-serif;
   color: white;
-  height: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+  }
 }
 .site-header:before {
   content: "";
@@ -40,11 +44,22 @@
 }
 @media only screen and (max-width: 768px) {
   .site-header .mobile-menu-btn {
-    display: inline-block;
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
   }
 }
 .site-header nav {
   flex: 1;
+}
+@media only screen and (max-width: 768px) {
+  .site-header nav {
+    display: none;
+    align-self: flex-end;
+  }
+  .site-header nav.open-mobile-menu {
+    display: flex;
+  }
 }
 .site-header nav .header-buttons {
   display: flex;
@@ -55,22 +70,39 @@
   margin: 0;
   padding: 0;
 }
+@media only screen and (max-width: 768px) {
+  .site-header nav .header-buttons {
+    align-items: flex-end;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+  .site-header nav .header-buttons li:nth-child(1) {
+    order: 2;
+  }
+}
 .site-header nav .header-buttons .btn-loadSampleData,
 .site-header nav .header-buttons .btn-logOut,
 .site-header nav .header-buttons .btn-logIn {
   margin-right: 10px;
   padding: 5px;
-  border: 3px double #ffffff;
+  border: none;
   background-color: initial;
   color: white;
   font-size: 16px;
   cursor: pointer;
   text-decoration: none;
 }
+@media only screen and (max-width: 768px) {
+  .site-header nav .header-buttons .btn-loadSampleData,
+  .site-header nav .header-buttons .btn-logOut,
+  .site-header nav .header-buttons .btn-logIn {
+    margin-right: 0;
+  }
+}
 .site-header h1 {
   margin: 0;
   font-size: 25px;
-  line-height: 50px;
+  line-height: 41px;
 }
 
 @media only screen and (max-width: 768px) {
