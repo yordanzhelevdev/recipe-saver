@@ -28,12 +28,13 @@
   align-items: center;
 }
 .viewRecipe-wrapper .aboutRecipe-container > * {
-  flex: 1 100%;
+  width: 100%;
 }
 .viewRecipe-wrapper .aboutRecipe-container .aboutRecipe-section1 {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
 }
 .viewRecipe-wrapper
   .aboutRecipe-container
@@ -42,6 +43,7 @@
   display: flex;
   flex-direction: column;
   order: 2;
+  align-items: center;
 }
 .viewRecipe-wrapper
   .aboutRecipe-container
@@ -73,5 +75,9 @@
 }
 .viewRecipe-wrapper .aboutRecipe-container .aboutRecipe-section1 h2 {
   order: 1;
-  font-size: 5.7vw;
+  font-size: 6.7vw;
+}
+.viewRecipe-wrapper .aboutRecipe-container .aboutRecipe-section2 {
+  display: flex;
+  justify-content: space-evenly;
 }

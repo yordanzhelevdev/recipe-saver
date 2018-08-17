@@ -36,11 +36,10 @@ class ViewRecipe extends React.Component {
                 <img src={this.state.recipe.dishImg} alt="Dish" />
               </div>
             </div>
-
             <h2>Recipe</h2>
           </section>
 
-          <div className="ingrAndDirection-container">
+          <section className="aboutRecipe-section2">
             <div className="ingredients-container">
               <h2>Ingredients</h2>
               <ul>
@@ -61,7 +60,7 @@ class ViewRecipe extends React.Component {
                   ))}
               </ul>
             </div>
-          </div>
+          </section>
         </main>
       </div>
     );
