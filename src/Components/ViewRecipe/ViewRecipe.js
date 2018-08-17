@@ -21,24 +21,24 @@ class ViewRecipe extends React.Component {
 
   render() {
     return (
-      <div class="viewRecipe-wrapper">
+      <div className="viewRecipe-wrapper">
         <button onClick={this.goBack} className="btn-goBack">
           Go back
         </button>
-        <div className="viewRecipe-container">
-          <header className="viewRecipe-header">
-            <div className="viewRecipe-recipeName">
-              <div className="viewRecipe-title">
+        <main className="aboutRecipe-container">
+          <section className="aboutRecipe-section1">
+            <div className="aboutRecipe-heading-container">
+              <header className="aboutRecipe-header">
                 <span className="title">Title</span>
                 <h1>{this.state.recipe.recipeName}</h1>
-              </div>
-
+              </header>
               <div className="recipePhoto-container">
                 <img src={this.state.recipe.dishImg} alt="Dish" />
               </div>
             </div>
+
             <h2>Recipe</h2>
-          </header>
+          </section>
 
           <div className="ingrAndDirection-container">
             <div className="ingredients-container">
@@ -62,7 +62,7 @@ class ViewRecipe extends React.Component {
               </ul>
             </div>
           </div>
-        </div>
+        </main>
       </div>
     );
   }
