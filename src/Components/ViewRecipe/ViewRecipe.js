@@ -32,7 +32,7 @@ class ViewRecipe extends React.Component {
                 <span className="title">Title</span>
                 <h1>{this.state.recipe.recipeName}</h1>
               </header>
-              <div className="recipePhoto-container">
+              <div className="aboutRecipe-photo">
                 <img src={this.state.recipe.dishImg} alt="Dish" />
               </div>
             </div>
