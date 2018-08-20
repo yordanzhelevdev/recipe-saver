@@ -15,40 +15,50 @@
   background-color: black;
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */ }
-  .modal .modal-content {
-    background-color: #a8bc9a;
-    margin: auto;
-    padding: 0;
-    width: 30%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white; }
-    .modal .modal-content .modal-header {
-      padding: 2px 16px;
-      background-color: #376e4b; }
-      .modal .modal-content .modal-header h2 {
-        color: white;
-        font-weight: normal;
-        font-size: 25px; }
-      .modal .modal-content .modal-header .close {
-        display: inline-block;
-        background: url("../../Images/letter-x.png") no-repeat center;
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        right: 5px;
-        top: 5px; }
-        .modal .modal-content .modal-header .close:hover, .modal .modal-content .modal-header .close:focus {
-          cursor: pointer; }
-  .modal .modal-body {
-    background-color: #a8bc9a; }
+  /* Black w/ opacity */
+}
+.modal .modal-content {
+  background-color: #a8bc9a;
+  margin: auto;
+  padding: 0;
+  width: 80vmin;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.modal .modal-content .modal-header {
+  padding: 2px 16px;
+  background-color: #376e4b;
+}
+.modal .modal-content .modal-header h2 {
+  color: white;
+  font-weight: normal;
+  font-size: 25px;
+}
+.modal .modal-content .modal-header .close {
+  display: inline-block;
+  background: url("../../Images/letter-x.png") no-repeat center;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.modal .modal-content .modal-header .close:hover,
+.modal .modal-content .modal-header .close:focus {
+  cursor: pointer;
+}
+.modal .modal-body {
+  background-color: #a8bc9a;
+}
 
 .closed {
-  display: none; }
+  display: none;
+}
 
 .opened {
-  display: block; }
+  display: block;
+}
