@@ -52,13 +52,13 @@ class ViewRecipe extends React.Component {
             </div>
             <div className="direction-container">
               <h2>Direction</h2>
-              <ul>
+              <ol>
                 {this.state.recipe &&
                   this.state.recipe.directions &&
                   this.state.recipe.directions.map(direction => (
                     <li key={direction}>{direction}</li>
                   ))}
-              </ul>
+              </ol>
             </div>
           </section>
         </main>
