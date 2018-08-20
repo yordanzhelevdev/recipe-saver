@@ -1,0 +1,16 @@
+.footer {
+  background-color: #376e4b;
+  height: 87px;
+  flex-shrink: 0;
+  .footer-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px 0 0 0;
+    span {
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -1,34 +1,43 @@
 .inputsContainer {
   display: flex;
   justify-content: space-around;
-  padding: 50px; }
-  .inputsContainer .recipeInputs {
-    display: flex;
-    flex-direction: column; }
-    .inputsContainer .recipeInputs input[type="text"] {
-      width: 100%;
-      height: 35px;
-      font-size: 25px; }
-    .inputsContainer .recipeInputs textarea {
-      width: 100%;
-      height: 100px;
-      resize: vertical;
-      font-size: 17px; }
+  padding: 15px;
+}
+.inputsContainer .recipeInputs {
+  display: flex;
+  flex-direction: column;
+}
+.inputsContainer .recipeInputs input[type="text"] {
+  width: 100%;
+  height: 35px;
+  font-size: 25px;
+}
+.inputsContainer .recipeInputs textarea {
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+  font-size: 17px;
+}
 
 .formBtns {
   text-align: center;
-  margin: 10px 20px; }
-  .formBtns input[type="submit"], .formBtns input[type="reset"] {
-    border: 3px double #ffffff;
-    padding: 8px 20px;
-    -webkit-transition: background .5s;
-    -o-transition: background .5s;
-    transition: background .5s;
-    cursor: pointer;
-    color: white;
-    font-size: 15px; }
-  .formBtns input[type="submit"] {
-    margin-right: 10px;
-    background-color: #2e6f2a; }
-  .formBtns input[type="reset"] {
-    background-color: #545454; }
+  margin: 10px 20px;
+}
+.formBtns input[type="submit"],
+.formBtns input[type="reset"] {
+  border: 3px double #ffffff;
+  padding: 8px 20px;
+  -webkit-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  transition: background 0.5s;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+}
+.formBtns input[type="submit"] {
+  margin-right: 10px;
+  background-color: #2e6f2a;
+}
+.formBtns input[type="reset"] {
+  background-color: #545454;
+}

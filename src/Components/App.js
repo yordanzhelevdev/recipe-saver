@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 import Recipe from "./Recipe/Recipe";
 import Modal from "./Modal/Modal";
 import CreateRecipeInputs from "./CreateRecipeInputs/CreateRecipeInputs";
@@ -123,49 +124,52 @@ class App extends React.Component {
       return <LoadingSpinner heading="Logging in" />;
     }
     return (
-      <div>
-        <Header
-          authenticated={this.state.authenticated}
-          loadSampleData={this.loadSampleData}
-        />
-        <Modal
-          isOpen={this.state.isOpen}
-          closeTheModal={this.closeTheModal}
-          modalType={this.state.isEdit ? "Edit Recipe" : "Add Recipe"}
-        >
-          {this.state.isOpen && this.state.isEdit ? (
-            <EditRecipeInputs
-              currentUser={this.state.currentUser}
-              recipes={this.state.recipes}
-              index={this.state.editableRecipe}
-              updateRecipe={this.updateRecipe}
-            />
+      <div className="wrapper-all">
+        <div className="inner-all">
+          <Header
+            authenticated={this.state.authenticated}
+            loadSampleData={this.loadSampleData}
+          />
+          <Modal
+            isOpen={this.state.isOpen}
+            closeTheModal={this.closeTheModal}
+            modalType={this.state.isEdit ? "Edit Recipe" : "Add Recipe"}
+          >
+            {this.state.isOpen && this.state.isEdit ? (
+              <EditRecipeInputs
+                currentUser={this.state.currentUser}
+                recipes={this.state.recipes}
+                index={this.state.editableRecipe}
+                updateRecipe={this.updateRecipe}
+              />
+            ) : (
+              <CreateRecipeInputs addRecipe={this.addRecipe} />
+            )}
+          </Modal>
+          <div className="recipeContainer">
+            {this.state && this.state.recipes[currentUser]
+              ? Object.keys(this.state.recipes[currentUser]).map(key => {
+                  return (
+                    <Recipe
+                      key={key}
+                      index={key}
+                      recipe={this.state.recipes[currentUser][key]}
+                      deleteRecipe={this.deleteRecipe}
+                      editRecipe={this.editRecipe}
+                    />
+                  );
+                })
+              : ""}
+          </div>
+          {this.state.authenticated ? (
+            <button className="btn-addRecipe" onClick={this.toggleModal}>
+              Add Recipe
+            </button>
           ) : (
-            <CreateRecipeInputs addRecipe={this.addRecipe} />
+            ""
           )}
-        </Modal>
-        <div className="recipeContainer">
-          {this.state && this.state.recipes[currentUser]
-            ? Object.keys(this.state.recipes[currentUser]).map(key => {
-                return (
-                  <Recipe
-                    key={key}
-                    index={key}
-                    recipe={this.state.recipes[currentUser][key]}
-                    deleteRecipe={this.deleteRecipe}
-                    editRecipe={this.editRecipe}
-                  />
-                );
-              })
-            : ""}
         </div>
-        {this.state.authenticated ? (
-          <button className="btn-addRecipe" onClick={this.toggleModal}>
-            Add Recipe
-          </button>
-        ) : (
-          ""
-        )}
+        <Footer />
       </div>
     );
   }
